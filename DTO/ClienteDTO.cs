@@ -29,6 +29,8 @@ namespace Muebles.DTO
             this.id = id;
             this.nomb = nomb;
             this.dcto = dcto;
+            this.correo = correo;
+            this.clave = clave;
         }
         
         public void insertar()

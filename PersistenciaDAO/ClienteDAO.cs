@@ -10,19 +10,19 @@ namespace Muebles
         private int id;
         private string nomb;
         private int dcto;
-        private string correo;
+        private string email;
         private string clave;
         public ClienteDAO()
         {
 
         }
 
-        public ClienteDAO(string id="",string nomb="",string dcto = "",string correo="",string clave="")
+        public ClienteDAO(string id="",string nomb="",string dcto = "",string email="",string clave="")
         {
             this.id = int.Parse(id);
             this.nomb = nomb;
             this.dcto = int.Parse(dcto);
-            this.correo = correo;
+            this.email = email;
             this.clave = clave;
         }
 
