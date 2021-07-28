@@ -22,7 +22,7 @@ namespace Muebles
             try
             {
                 conexionBD.Open();
-                MessageBox.Show("Conexión establecida!!");
+                
                 /*
                 MySqlDataReader reader = null;
                 MySqlCommand cmd = new MySqlCommand("show databases", conexionBD);

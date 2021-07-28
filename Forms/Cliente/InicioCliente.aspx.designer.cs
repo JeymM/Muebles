@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Muebles.Forms
+namespace Muebles.Forms.Cliente
 {
 
 
-    public partial class Index
+    public partial class InicioCliente
     {
 
         /// <summary>
@@ -24,15 +24,6 @@ namespace Muebles.Forms
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control dropList.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropList;
-
-        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -42,13 +33,31 @@ namespace Muebles.Forms
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control Button1.
+        /// Control TxtId.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox TxtId;
+
+        /// <summary>
+        /// Control Nombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Nombre;
+
+        /// <summary>
+        /// Control TxtNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtNombre;
 
         /// <summary>
         /// Control Label2.
@@ -60,31 +69,13 @@ namespace Muebles.Forms
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control txtCorreo.
+        /// Control TxtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
-
-        /// <summary>
-        /// Control Button2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-
-        /// <summary>
-        /// Control txtContrasena.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
+        protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
         /// Control Label3.
@@ -96,12 +87,21 @@ namespace Muebles.Forms
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control BtnIngresar.
+        /// Control TxtClave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnIngresar;
+        protected global::System.Web.UI.WebControls.TextBox TxtClave;
+
+        /// <summary>
+        /// Control BtnRegistrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnRegistrar;
     }
 }

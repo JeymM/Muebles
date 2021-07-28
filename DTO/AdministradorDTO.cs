@@ -7,12 +7,12 @@ namespace Muebles.DTO
 {
     public class AdministradorDTO
     {
-        private int id_ad { get; set; }
-        private string nom { get; set; }
-        private int tel_ad { get; set; }
-        private string correo { get; set; }
-        private string clave { get; set; }
-        public List<AdministradorDTO> administradores { get => administradores; set => administradores = value; }
+        public int id_ad { get; set; }
+        public string nom { get; set; }
+        public int tel_ad { get; set; }
+        public string correo { get; set; }
+        public string clave { get; set; }
+        public List<AdministradorDTO> administradores;
         private AdministradorDAO AD;
         private Conexion conexion;
 
@@ -48,7 +48,7 @@ namespace Muebles.DTO
             AdministradorDTO a;
             while (conexion.resultado.Read())
             {
-                a = new AdministradorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetInt32(3), "" + conexion.resultado.GetInt32(4));
+                a = new AdministradorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4));
                 administradores.Add(a);
                 i++;
             }

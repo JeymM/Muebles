@@ -72,8 +72,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Forms\Administrador\sesionsesionadministrador.aspx" />
+    <Content Include="Forms\Cliente\InicioCliente.aspx" />
+    <Content Include="Forms\Cliente\sesionsesioncliente.aspx" />
     <Content Include="Forms\Index.aspx" />
-    <Content Include="Forms\WebForm1.aspx" />
+    <Content Include="Forms\Proveedor\InicioProveedor.aspx" />
+    <Content Include="Forms\Proveedor\sesionproveedor.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +90,41 @@
     <Compile Include="DTO\ProveedorDTO.cs" />
     <Compile Include="DTO\Tel_ClienteDTO.cs" />
     <Compile Include="DTO\Tel_ProveedorDTO.cs" />
+    <Compile Include="Forms\Administrador\AdministradorMain.Master.cs">
+      <DependentUpon>AdministradorMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\AdministradorMain.Master.designer.cs">
+      <DependentUpon>AdministradorMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\sesionsesionadministrador.aspx.cs">
+      <DependentUpon>sesionsesionadministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\sesionsesionadministrador.aspx.designer.cs">
+      <DependentUpon>sesionsesionadministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\ClienteMain.Master.cs">
+      <DependentUpon>ClienteMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\ClienteMain.Master.designer.cs">
+      <DependentUpon>ClienteMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\InicioCliente.aspx.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\InicioCliente.aspx.designer.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\sesionsesioncliente.aspx.cs">
+      <DependentUpon>sesionsesioncliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\sesionsesioncliente.aspx.designer.cs">
+      <DependentUpon>sesionsesioncliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,12 +132,26 @@
     <Compile Include="Forms\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Forms\Proveedor\InicioProveedor.aspx.cs">
+      <DependentUpon>InicioProveedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Forms\Proveedor\InicioProveedor.aspx.designer.cs">
+      <DependentUpon>InicioProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\ProveedorMain.Master.cs">
+      <DependentUpon>ProveedorMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\ProveedorMain.Master.designer.cs">
+      <DependentUpon>ProveedorMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\sesionproveedor.aspx.cs">
+      <DependentUpon>sesionproveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\sesionproveedor.aspx.designer.cs">
+      <DependentUpon>sesionproveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="PersistenciaDAO\AdministradorDAO .cs" />
     <Compile Include="PersistenciaDAO\ArticuloDAO.cs" />
@@ -113,6 +166,9 @@
     <Compile Include="PersistenciaDAO\Tel_proveedorDAO.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Forms\Proveedor\ProveedorMain.Master" />
+    <Content Include="Forms\Administrador\AdministradorMain.Master" />
+    <Content Include="Forms\Cliente\ClienteMain.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

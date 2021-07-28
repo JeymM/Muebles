@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Windows;
 
 namespace Muebles.DTO
 {
     public class ProveedorDTO
     {
-        private int nit { get; set; }
-        private string contac { get; set; }
-        private string dir { get; set; }
-        private string nombr { get; set; }
-        private string correo { get; set; }
-        private string clave { get; set; }
-        public List<ProveedorDTO> proveedores { get => proveedores; set => proveedores = value; }
+        public int nit { get; set; }
+        public string contac { get; set; }
+        public string dir { get; set; }
+        public string nombr { get; set; }
+        public string correo { get; set; }
+        public string clave { get; set; }
+        public List<ProveedorDTO> proveedores;
         private ProveedorDAO PD;
         private Conexion conexion;
         public ProveedorDTO()
@@ -29,6 +30,8 @@ namespace Muebles.DTO
             this.contac = contac;
             this.dir = dir;
             this.nombr = nombr;
+            this.correo = correo;
+            this.clave = clave;
         }
         public void insertar()
         {
@@ -46,8 +49,9 @@ namespace Muebles.DTO
             ProveedorDTO p;
             while (conexion.resultado.Read())
             {
-                p = new ProveedorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetInt32(3), "" + conexion.resultado.GetInt32(4), "" + conexion.resultado.GetInt32(5));
+                p = new ProveedorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), "" + conexion.resultado.GetString(5));
                 proveedores.Add(p);
+                //MessageBox.Show("datos de la db:\n" + proveedores[i].correo + proveedores[i].clave);
                 i++;
             }
 
