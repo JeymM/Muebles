@@ -8,12 +8,12 @@ namespace Muebles.DTO
 {
     public class ArticuloDTO
     {
-        private int ide { get; set; }
-        private int id_provee { get; set; }
-        private double prec { get; set; }
-        private string descrip { get; set; }
-        private string nombre { get; set; }
-        public List<ArticuloDTO> articulos { get => articulos; set => articulos = value; }
+        public int ide { get; set; }
+        public int id_provee { get; set; }
+        public double prec { get; set; }
+        public string descrip { get; set; }
+        public string nombre { get; set; }
+        public List<ArticuloDTO> articulos;
         private ArticuloDAO AD;
         private Conexion conexion;
         public ArticuloDTO()
@@ -30,6 +30,7 @@ namespace Muebles.DTO
             this.id_provee = int.Parse(id_provee);
             this.prec = double.Parse(prec);
             this.descrip = descrip;
+            this.nombre = nombre;
         }
         public void insertar()
         {
@@ -47,7 +48,7 @@ namespace Muebles.DTO
             ArticuloDTO a;
             while (conexion.resultado.Read())
             {
-                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetInt32(3), "" + conexion.resultado.GetInt32(4));
+                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4));
                 articulos.Add(a);
                 i++;
             }

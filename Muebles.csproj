@@ -72,10 +72,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Forms\Administrador\Compras.aspx" />
+    <Content Include="Forms\Administrador\Inventario.aspx" />
+    <Content Include="Forms\Administrador\Productos_Prov.aspx" />
+    <Content Include="Forms\Administrador\Registro_Usersnew.aspx" />
     <Content Include="Forms\Administrador\sesionsesionadministrador.aspx" />
+    <Content Include="Forms\Administrador\Ventas.aspx" />
+    <Content Include="Forms\Administrador\VerificarClientes.aspx" />
+    <Content Include="Forms\Cliente\Carrito.aspx" />
+    <Content Include="Forms\Cliente\Factura_Historial.aspx" />
     <Content Include="Forms\Cliente\InicioCliente.aspx" />
     <Content Include="Forms\Cliente\sesionsesioncliente.aspx" />
     <Content Include="Forms\Index.aspx" />
+    <Content Include="Forms\Proveedor\articulo.aspx" />
+    <Content Include="Forms\Proveedor\articuloIngresarStock.aspx" />
+    <Content Include="Forms\Proveedor\Historial_Ventas.aspx" />
     <Content Include="Forms\Proveedor\InicioProveedor.aspx" />
     <Content Include="Forms\Proveedor\sesionproveedor.aspx" />
     <Content Include="Web.config" />
@@ -97,6 +108,34 @@
     <Compile Include="Forms\Administrador\AdministradorMain.Master.designer.cs">
       <DependentUpon>AdministradorMain.Master</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\Compras.aspx.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Compras.aspx.designer.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\Inventario.aspx.cs">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Inventario.aspx.designer.cs">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\Productos_Prov.aspx.cs">
+      <DependentUpon>Productos_Prov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Productos_Prov.aspx.designer.cs">
+      <DependentUpon>Productos_Prov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\Registro_Usersnew.aspx.cs">
+      <DependentUpon>Registro_Usersnew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Registro_Usersnew.aspx.designer.cs">
+      <DependentUpon>Registro_Usersnew.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\sesionsesionadministrador.aspx.cs">
       <DependentUpon>sesionsesionadministrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -104,12 +143,40 @@
     <Compile Include="Forms\Administrador\sesionsesionadministrador.aspx.designer.cs">
       <DependentUpon>sesionsesionadministrador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\Ventas.aspx.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Ventas.aspx.designer.cs">
+      <DependentUpon>Ventas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\VerificarClientes.aspx.cs">
+      <DependentUpon>VerificarClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\VerificarClientes.aspx.designer.cs">
+      <DependentUpon>VerificarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cliente\ClienteMain.Master.cs">
       <DependentUpon>ClienteMain.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Cliente\ClienteMain.Master.designer.cs">
       <DependentUpon>ClienteMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\Factura_Historial.aspx.cs">
+      <DependentUpon>Factura_Historial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\Factura_Historial.aspx.designer.cs">
+      <DependentUpon>Factura_Historial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cliente\InicioCliente.aspx.cs">
       <DependentUpon>InicioCliente.aspx</DependentUpon>
@@ -131,6 +198,27 @@
     </Compile>
     <Compile Include="Forms\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\articulo.aspx.cs">
+      <DependentUpon>articulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\articulo.aspx.designer.cs">
+      <DependentUpon>articulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\articuloIngresarStock.aspx.cs">
+      <DependentUpon>articuloIngresarStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\articuloIngresarStock.aspx.designer.cs">
+      <DependentUpon>articuloIngresarStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\Historial_Ventas.aspx.cs">
+      <DependentUpon>Historial_Ventas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\Historial_Ventas.aspx.designer.cs">
+      <DependentUpon>Historial_Ventas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Proveedor\InicioProveedor.aspx.cs">
       <DependentUpon>InicioProveedor.aspx</DependentUpon>

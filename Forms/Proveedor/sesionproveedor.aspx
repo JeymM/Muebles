@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Proveedor/ProveedorMain.Master"  AutoEventWireup="true" CodeBehind="sesionproveedor.aspx.cs" Inherits="Muebles.Forms.Proveedor.sesionproveedor" %>
 
-<asp:Content ID="ContentProveedorMain" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="ContentProveedorMain" ContentPlaceHolderID="proveedorID" runat="server">
     
     
 

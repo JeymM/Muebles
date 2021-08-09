@@ -11,7 +11,7 @@ namespace Muebles.Forms.Proveedor
 {
 
 
-    public partial class InicioProveedor
+    public partial class articuloIngresarStock
     {
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioProveedor.aspx.cs" Inherits="Muebles.Forms.Proveedor.InicioProveedor" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Proveedor/ProveedorMain.Master" AutoEventWireup="true" CodeBehind="Historial_Ventas.aspx.cs" Inherits="Muebles.Forms.Proveedor.Historial_Ventas" %>
 
 <asp:Content ID="ContentProveedorMain" ContentPlaceHolderID="proveedorID" runat="server">
     
@@ -10,4 +10,3 @@
 
 
 </asp:Content>
-
