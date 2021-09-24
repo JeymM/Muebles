@@ -9,7 +9,6 @@ namespace Muebles
     {
         private int id;
         private string nomb;
-        private int dcto;
         private string correo;
         private string clave;
         public ClienteDAO()
@@ -17,11 +16,10 @@ namespace Muebles
 
         }
 
-        public ClienteDAO(string id="",string nomb="",string dcto = "",string correo="",string clave="")
+        public ClienteDAO(string id="",string nomb="",string correo="",string clave="")
         {
             this.id = int.Parse(id);
             this.nomb = nomb;
-            this.dcto = int.Parse(dcto);
             this.correo = correo;
             this.clave = clave;
         }
@@ -43,11 +41,11 @@ namespace Muebles
         }
         public string Insercion ()
         {
-            return "insert into cliente (id,nombre,descuento,correo,clave) values (" + id + ",'" + nomb + "', " + dcto + "," + correo + "," + clave + ");";
+            return "insert into cliente (id,nombre,correo,clave) values (" + id + ",'" + nomb + "', " + correo + "," + clave + ");";
         }
         public string Actualizacion()
         {
-            return "update cliente set " + "nombre='"+nomb+"',"+ "descuento = '"+dcto+ "'," + "correo = '" + correo + "'," + "clave = '" + clave + "' where id=" + id+"";
+            return "update cliente set " + "nombre='" + correo + "','" + clave + "' where id = " + id + "";
 
         }
         public string Eliminar()

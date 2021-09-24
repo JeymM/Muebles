@@ -36,7 +36,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Proveedor/articulo.aspx");%>>Ingresar Articulo</a></li>
             <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Proveedor/articuloIngresarStock.aspx");%>>Ingresar Stock</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Proveedor/articuloIngresarStock.aspx");%>>Consultar Articulos</a></li>
             <li><a class="dropdown-item" href="#">Something otro item</a></li>
           </ul>
         </li>

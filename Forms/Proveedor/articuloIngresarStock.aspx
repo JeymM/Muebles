@@ -2,7 +2,8 @@
 
 <asp:Content ID="ContentProveedorMain" ContentPlaceHolderID="proveedorID" runat="server">
 
-	<!-- aqui comienza el codigo del proyecto aun con el php incluido-->
+	<!-- aqui comienza el codigo del proyecto,copiar masterpagefile-->
+	
 
 	<div class="container">
 
