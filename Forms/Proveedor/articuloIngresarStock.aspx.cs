@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows;
 
 namespace Muebles.Forms.Proveedor
 {
@@ -28,10 +29,24 @@ namespace Muebles.Forms.Proveedor
                 Response.Write("<td>" + arti.prec + "</td>");
                 Response.Write("<td>" + arti.descrip + "</td>");
                 Response.Write("<td>" + arti.nombre + "</td>");
+                Response.Write("<td>");
+                Response.Write("<a class='btn btn-info' href='./ActualizarArticulo.aspx"+
+                    "?ide=" + arti.ide+
+                    "&cant=" + arti.id_provee+
+                    "&prec=" + arti.prec+
+                    "&descrip=" + arti.descrip+
+                    "&name=" + arti.nombre+"'><i>Actualizar</i></a>");
+                Response.Write("</td>");                
 
                 Response.Write("</tr>");
 
             }
+        }
+
+        public void SubmitBtn_Click(Object sender, EventArgs e)
+        {
+            Console.WriteLine("entre");
+            HttpContext.Current.Response.Write("entre");
         }
 
     }

@@ -84,6 +84,7 @@
     <Content Include="Forms\Cliente\InicioCliente.aspx" />
     <Content Include="Forms\Cliente\sesionsesioncliente.aspx" />
     <Content Include="Forms\Index.aspx" />
+    <Content Include="Forms\Proveedor\ActualizarArticulo.aspx" />
     <Content Include="Forms\Proveedor\articulo.aspx" />
     <Content Include="Forms\Proveedor\articuloIngresarStock.aspx" />
     <Content Include="Forms\Proveedor\Historial_Ventas.aspx" />
@@ -198,6 +199,13 @@
     </Compile>
     <Compile Include="Forms\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\ActualizarArticulo.aspx.cs">
+      <DependentUpon>ActualizarArticulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\ActualizarArticulo.aspx.designer.cs">
+      <DependentUpon>ActualizarArticulo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Proveedor\articulo.aspx.cs">
       <DependentUpon>articulo.aspx</DependentUpon>
