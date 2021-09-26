@@ -35,7 +35,6 @@ namespace Muebles.Forms
                     {
                         Session["id"] = clientes.id;
                         Session["nombre"] = clientes.nomb;
-                        Session["descuento"] = clientes.dcto;
                         Session["correo"] = clientes.correo;
                         Session["clave"] = clientes.clave;
                         Response.Redirect(Session["url"] + "/Cliente/sesionsesioncliente.aspx");
