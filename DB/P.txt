@@ -1,0 +1,21 @@
+Vistas:
+Administrador:
+Registrar usuarios (clientes,proveedores,administradores)
+Clientes Registrador (listar,update)
+Productos:
+Ingresar inventario(actualizar)
+Ventas realizadas
+
+
+Cliente:
+Ir al carrito(se guarda en la tabla pedido,se crea un articulo_pedido para enlazar los articulos
+con el pedido, restar el stock del articulo seleccionado)
+Compras realizadas (historial de factura)(se estaria manejando en la tabla pedido)
+Puede actualizar sus propios datos (contraseña y número telefónico)
+
+
+Proveedor:
+Insertar articulos
+Modificar,consultar el stock de los articulos
+
+
