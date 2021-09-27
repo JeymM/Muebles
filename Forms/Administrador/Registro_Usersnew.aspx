@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro_Usersnew.aspx.cs" Inherits="Muebles.Forms.Administrador.Registro_Usersnew" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Administrador/AdministradorMain.Master" AutoEventWireup="true" CodeBehind="Registro_Usersnew.aspx.cs" Inherits="Muebles.Forms.Administrador.Registro_Usersnew" %>
 
 
 <asp:Content ID="ContentAdministradorMain" ContentPlaceHolderID="AdministradorId" runat="server">
@@ -14,8 +14,9 @@
                 <select name="user">
             <option value="">-Seleccione una opción-</option>
             <optgroup label="Tipo Users">
-             <option value="Cliente" <%=ingreso == "Cliente" ? "selected" : ""%>>Cliente</option>
-          <option value="Proveedor" <%=ingreso == "Proveedor" ? "selected" : ""%>>Proveedor</option>
+            <option value="Cliente" <%=ingreso == "Cliente" ? "selected" : ""%>>Cliente</option>
+            <option value="Proveedor" <%=ingreso == "Proveedor" ? "selected" : ""%>>Proveedor</option>
+            <option value="Proveedor" <%=ingreso == "Administrador" ? "selected" : ""%>>Administrador</option>
             </optgroup>
 
                  
@@ -26,12 +27,22 @@
 
                 <div class="form-group">
                   <label>ID Usuario</label>
-                  <input runat="server" name="idCliente" id="idCliente" type="number" class="form-control" placeholder="Ingrese el ID del cliente" required="required">
+                  <input runat="server" name="iduser" id="iduser" type="number" class="form-control" placeholder="Ingrese el ID del usuario" required="required">
+			    </div>
+
+                <div class="form-group">
+                <label>Dirección</label>
+                <input runat="server" name="dirección" type="text" id="dirección" class="form-control" placeholder="Ingrese la dirección " required="required">
+				</div>
+
+                <div class="form-group">
+                  <label>Contacto</label>
+                  <input runat="server" name="contac" id="contac" type="number" class="form-control" placeholder="Ingrese el contacto" required="required">
 			    </div>
 
                 <div class="form-group">
                   <label>Nombre</label>
-                  <input runat="server" name="nombre" type="text" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto" required="required">
+                  <input runat="server" name="nombre" type="text" id="nombre" class="form-control" placeholder="Ingrese el nombre del usuario" required="required">
 				</div>
 
                 <div class="form-group">

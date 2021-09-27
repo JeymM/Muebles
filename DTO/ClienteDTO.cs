@@ -47,7 +47,7 @@ namespace Muebles.DTO
             ClienteDTO c;
             while (conexion.resultado.Read())
             {
-                c = new ClienteDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3));
+                c = new ClienteDTO("" + conexion.resultado.GetString(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3));
                 clientes.Add(c);
                 i++;
             }

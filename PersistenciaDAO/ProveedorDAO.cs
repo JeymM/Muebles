@@ -40,7 +40,7 @@ namespace Muebles
         }
         public string Insercion()
         {
-            return "Insert into proveedor(nit,contacto,direccion,nombre) values(" + nit + ",'" + contac + "', '" + dir + "','"+nombr + "','" + correo + "','" + clave + "');";
+            return "Insert into proveedor(nit,contacto,direccion,nombre,correo,clave) values(" + nit + ",'" + contac + "', '" + dir + "','"+nombr + "','" + correo + "','" + clave + "');";
         }
         public string Actualizacion()
         {

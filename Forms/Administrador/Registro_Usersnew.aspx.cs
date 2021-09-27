@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Windows;
 using System.Web.UI.WebControls;
+using Muebles.DTO;
 
 namespace Muebles.Forms.Administrador
 {
@@ -14,14 +15,35 @@ namespace Muebles.Forms.Administrador
         protected void Page_Load(object sender, EventArgs e)
         {
             ingreso = Request.Form["user"];
-            MessageBox.Show("El usuario registrado es :" , ingreso );
+            
         }
         public void Registrar(object sender,EventArgs e)
         {
-            if (ingreso.Equals("Cliente"))
+            if (ingreso == "Cliente")
             {
-                MessageBox.Show("El usuario registrado es :", ingreso);
+                ClienteDTO obj = new ClienteDTO(iduser.Value, nombre.Value, email.Value, clave.Value);
+                obj.insertar();
+                MessageBox.Show("hello world :");
+            }else if (ingreso == "Proveedor")
+            {
+                ProveedorDTO obj = new ProveedorDTO(iduser.Value,contac.Value,dirección.Value,nombre.Value,email.Value,clave.Value);
+                obj.insertar();
+                MessageBox.Show("hello world :");
+            }else if(ingreso=="Administrador")
+            {
+                
+                AdministradorDTO obj = new AdministradorDTO(iduser.Value,nombre.Value,contac.Value,email.Value,clave.Value);
+                obj.insertar();
+                MessageBox.Show("hello world :");
+            }
+            
+                   
+                       
+                       
+                    
+                   
+
             }
         }
     }
-}
+
