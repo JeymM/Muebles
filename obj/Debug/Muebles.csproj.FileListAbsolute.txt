@@ -94,3 +94,39 @@ C:\Users\Jeym\source\repos\Muebles\obj\Debug\Muebles.csproj.CoreCompileInputs.ca
 C:\Users\Jeym\source\repos\Muebles\obj\Debug\Muebles.csproj.CopyComplete
 C:\Users\Jeym\source\repos\Muebles\obj\Debug\Muebles.dll
 C:\Users\Jeym\source\repos\Muebles\obj\Debug\Muebles.pdb
+D:\Desarrollo de software\C#\Muebles\bin\Muebles.dll.config
+D:\Desarrollo de software\C#\Muebles\bin\Muebles.dll
+D:\Desarrollo de software\C#\Muebles\bin\Muebles.pdb
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\csc.exe
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\csc.exe.config
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\csc.rsp
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\csi.exe
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\csi.rsp
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\System.AppContext.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\System.Collections.Immutable.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\System.IO.FileSystem.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\System.Reflection.Metadata.dll
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\vbc.exe
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\vbc.exe.config
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\vbc.rsp
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\VBCSCompiler.exe
+D:\Desarrollo de software\C#\Muebles\bin\roslyn\VBCSCompiler.exe.config
+D:\Desarrollo de software\C#\Muebles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Desarrollo de software\C#\Muebles\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Desarrollo de software\C#\Muebles\obj\Debug\Muebles.csprojAssemblyReference.cache
+D:\Desarrollo de software\C#\Muebles\obj\Debug\Muebles.csproj.CoreCompileInputs.cache
+D:\Desarrollo de software\C#\Muebles\obj\Debug\Muebles.csproj.CopyComplete
+D:\Desarrollo de software\C#\Muebles\obj\Debug\Muebles.dll
+D:\Desarrollo de software\C#\Muebles\obj\Debug\Muebles.pdb
