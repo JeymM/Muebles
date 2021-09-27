@@ -22,9 +22,10 @@ namespace Muebles.Forms
 
         protected void BtnIngresar_Click(object sender, EventArgs e)
         {
-            string opc = dropList.SelectedValue;
-            string corr = txtCorreo.Text;
-            string pass = txtContrasena.Text;
+            string opc = Convert.ToString(Request.Form["dropList"]);
+            string corr = Convert.ToString(correo.Value);
+            string pass = Convert.ToString(password.Value);
+            
 
             if (opc == "Cliente")
             {
@@ -88,7 +89,10 @@ namespace Muebles.Forms
                 }
             }
         }
-
+        public void BtnRegistrar_Click (object sender, EventArgs e)
+        {
+            MessageBox.Show("dio click en registrar");
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect(Session["url"] + "/Cliente/InicioCliente.aspx");
