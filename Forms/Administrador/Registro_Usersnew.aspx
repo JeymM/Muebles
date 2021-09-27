@@ -7,12 +7,25 @@
 		    <div class="col-3"></div>
 		    <div class="col-6">
 			    <div class="card ">
-				    <div class="card-header bg-primary text-white">Registrar Cliente</div>
+				    <div class="card-header bg-primary text-white">Registrar Usuario</div>
 				    <div class="card-body">
+
+                <div class="form-group">
+                <select name="user">
+            <option value="">-Seleccione una opción-</option>
+            <optgroup label="Tipo Users">
+             <option value="Cliente" <%=ingreso == "Cliente" ? "selected" : ""%>>Cliente</option>
+          <option value="Proveedor" <%=ingreso == "Proveedor" ? "selected" : ""%>>Proveedor</option>
+            </optgroup>
+
+                 
+                </select>
+
+                </div>
 
 
                 <div class="form-group">
-                  <label>ID Cliente</label>
+                  <label>ID Usuario</label>
                   <input runat="server" name="idCliente" id="idCliente" type="number" class="form-control" placeholder="Ingrese el ID del cliente" required="required">
 			    </div>
 
@@ -30,7 +43,7 @@
                   <label>Clave</label>
                   <input runat="server" name="clave" id="clave" type="number" placeholder="Ingrese una contraseña" class="form-control" required="required">
 				</div>       
-                <asp:button runat="server" Text="Registrar" id="botonCli" type="submit" name="registrar" class="btn btn-primary" OnClick="botonCli_Click"></asp:button>
+                <asp:button runat="server" Text="Registrar" id="botonCli" type="submit" name="Registro" class="btn btn-primary" OnClick="Registrar"></asp:button>
 
 
 				    </div>

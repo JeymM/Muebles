@@ -26,7 +26,7 @@
             <asp:TextBox ID="TxtClave" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="BtnRegistrar" runat="server" Text="Registrar" />
+            <asp:Button ID="BtnRegistrar" runat="server" Text="Registrar"/>
         </div>
     </form>
 </body>
