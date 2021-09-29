@@ -7,10 +7,10 @@ namespace Muebles
 {
     public class ClienteDAO
     {
-        private int id;
-        private string nomb;
-        private string correo;
-        private string clave;
+        public int id;
+        public string nomb;
+        public string correo;
+        public string clave;
         public ClienteDAO()
         {
 
@@ -41,7 +41,7 @@ namespace Muebles
         }
         public string Insercion ()
         {
-            return "insert into cliente (id,nombre,correo,clave) values (" + id + ",'" + nomb + "', " + correo + "," + clave + ");";
+            return "Insert into cliente(id,nombre,correo,clave) values(" + id + ",'" + nomb + "', '" + correo + "','" + clave + "');";
         }
         public string Actualizacion()
         {

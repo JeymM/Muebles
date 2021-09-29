@@ -15,13 +15,31 @@ namespace Muebles.Forms.Administrador
     {
 
         /// <summary>
-        /// Control idCliente.
+        /// Control iduser.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl idCliente;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl iduser;
+
+        /// <summary>
+        /// Control dirección.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText dirección;
+
+        /// <summary>
+        /// Control contac.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl contac;
 
         /// <summary>
         /// Control nombre.
