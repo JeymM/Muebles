@@ -24,11 +24,11 @@ namespace Muebles.DTO
         public ClienteDTO(string id = "", string nomb = "",string correo="",string clave="")
         {
             this.conexion = new Conexion();
-            this.CD = new ClienteDAO(id, nomb, correo,clave);
             this.id = id;
             this.nomb = nomb;
             this.correo = correo;
             this.clave = clave;
+            this.CD = new ClienteDAO(id, nomb, correo, clave);
         }
         
         public void insertar()

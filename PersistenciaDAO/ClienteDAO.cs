@@ -41,7 +41,7 @@ namespace Muebles
         }
         public string Insercion ()
         {
-            return "insert into cliente (id,nombre,correo,clave) values (" + id + "," + nomb + ", " + correo + "," + clave + ");";
+            return "Insert into cliente(id,nombre,correo,clave) values(" + id + ",'" + nomb + "', '" + correo + "','" + clave + "');";
         }
         public string Actualizacion()
         {

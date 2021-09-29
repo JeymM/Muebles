@@ -15,28 +15,30 @@ namespace Muebles.Forms.Administrador
         protected void Page_Load(object sender, EventArgs e)
         {
             ingreso = Request.Form["user"];
-            
+
         }
-        public void Registrar(object sender,EventArgs e)
+        public void Registrar(object sender, EventArgs e)
         {
             if (ingreso == "Cliente")
             {
                 ClienteDTO obj = new ClienteDTO(iduser.Value, nombre.Value, email.Value, clave.Value);
                 obj.insertar();
                 MessageBox.Show("hello world :");
-            }else if (ingreso == "Proveedor")
+            }
+            else if (ingreso == "Administrador")
             {
-                ProveedorDTO obj = new ProveedorDTO(iduser.Value,contac.Value,dirección.Value,nombre.Value,email.Value,clave.Value);
-                obj.insertar();
-                MessageBox.Show("hello world :");
-            }else if(ingreso=="Administrador")
+
+                AdministradorDTO obj1 = new AdministradorDTO(iduser.Value, nombre.Value, contac.Value, email.Value, clave.Value);
+                obj1.insertar();
+                MessageBox.Show("entro :");
+            }
+
+        else if (ingreso == "Proveedor")
             {
-                
-                AdministradorDTO obj = new AdministradorDTO(iduser.Value,nombre.Value,contac.Value,email.Value,clave.Value);
-                obj.insertar();
+                ProveedorDTO obj = new ProveedorDTO(iduser.Value, contac.Value, dirección.Value, nombre.Value, email.Value, clave.Value);
+        obj.insertar();
                 MessageBox.Show("hello world :");
             }
-            
                    
                        
                        

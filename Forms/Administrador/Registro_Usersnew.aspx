@@ -15,8 +15,9 @@
             <option value="">-Seleccione una opción-</option>
             <optgroup label="Tipo Users">
             <option value="Cliente" <%=ingreso == "Cliente" ? "selected" : ""%>>Cliente</option>
-            <option value="Proveedor" <%=ingreso == "Proveedor" ? "selected" : ""%>>Proveedor</option>
             <option value="Proveedor" <%=ingreso == "Administrador" ? "selected" : ""%>>Administrador</option>
+            <option value="Proveedor" <%=ingreso == "Proveedor" ? "selected" : ""%>>Proveedor</option>
+        
             </optgroup>
 
                  
