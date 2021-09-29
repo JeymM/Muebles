@@ -11,7 +11,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="card">
-					<div class="card-header bg-info text-white">Productos</div>
+					<div class="card-header bg-info text-white" id="tab">Productos</div>
 					<div class="card-body">
 
 						<div class="form-group">
@@ -20,12 +20,9 @@
 						<table class="table table-striped table-hover">
 							<thead>
 								<tr>
-									<th scope="col">ID Producto</th>
-									<th scope="col">Cantidad</th>
-									<th scope="col">Precio</th>
-									<th scope="col">Descripción</th>
+									<th scope="col">ID Cliente</th>
 									<th scope="col">Nombre</th>
-									<th scope="col">Actualizar Stock</th>
+									<th scope="col">Correo</th>
 								</tr>
 							</thead>
 							<tbody>
