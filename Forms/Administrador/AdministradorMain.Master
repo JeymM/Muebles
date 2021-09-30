@@ -30,13 +30,22 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Productos
+            Usuarios
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/VerificarClientes.aspx");%>>Clientes Registrados</a></li>
-            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Inventario.aspx");%>>Insertar Inventario</a></li>
-            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Ventas.aspx");%>>Ventas Realizadas</a></li>
               <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Registro_Usersnew.aspx");%>>Registrar usuarios</a></li>
+
+            <li><a class="dropdown-item" href="#">Something otro item</a></li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Inventario.aspx");%>>Insertar Inventario</a></li>
+            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Ventas.aspx");%>>Ventas Realizadas</a></li>  
             <li><a class="dropdown-item" href="#">Something otro item</a></li>
           </ul>
         </li>
@@ -45,6 +54,7 @@
   </div>
 </nav>
             <!-- Terminacion una barra de navegacion -->
+
             <asp:ContentPlaceHolder ID="AdministradorId" runat="server">
             </asp:ContentPlaceHolder>
         </div>

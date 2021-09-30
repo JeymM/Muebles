@@ -16,7 +16,7 @@ namespace Muebles
         {
            
             string datos = "";
-            string cadenaConexion = "server=localhost;port=3307; user id=root;password=;database=tienda;";
+            string cadenaConexion = "server=localhost;port=3306; user id=root;password=;database=tienda;";
             conexionBD = new MySqlConnection(cadenaConexion);
 
             try

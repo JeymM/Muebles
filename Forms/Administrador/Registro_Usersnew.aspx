@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro_Usersnew.aspx.cs" Inherits="Muebles.Forms.Administrador.Registro_Usersnew" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Administrador/AdministradorMain.Master" AutoEventWireup="true" CodeBehind="Registro_Usersnew.aspx.cs" Inherits="Muebles.Forms.Administrador.Registro_Usersnew" %>
 
 
 <asp:Content ID="ContentAdministradorMain" ContentPlaceHolderID="AdministradorId" runat="server">
@@ -7,18 +7,43 @@
 		    <div class="col-3"></div>
 		    <div class="col-6">
 			    <div class="card ">
-				    <div class="card-header bg-primary text-white">Registrar Cliente</div>
+				    <div class="card-header bg-primary text-white">Registrar Usuario</div>
 				    <div class="card-body">
+
+                <div class="form-group">
+                <select name="user">
+            <option value="">-Seleccione una opción-</option>
+            <optgroup label="Tipo Users">
+            <option value="Cliente" <%=ingreso == "Cliente" ? "selected" : ""%>>Cliente</option>
+            <option value="Proveedor" <%=ingreso == "Administrador" ? "selected" : ""%>>Administrador</option>
+            <option value="Proveedor" <%=ingreso == "Proveedor" ? "selected" : ""%>>Proveedor</option>
+        
+            </optgroup>
+
+                 
+                </select>
+
+                </div>
 
 
                 <div class="form-group">
-                  <label>ID Cliente</label>
-                  <input runat="server" name="idCliente" id="idCliente" type="number" class="form-control" placeholder="Ingrese el ID del cliente" required="required">
+                  <label>ID Usuario</label>
+                  <input runat="server" name="iduser" id="iduser" type="number" class="form-control" placeholder="Ingrese el ID del usuario" required="required">
+			    </div>
+
+                <div class="form-group">
+                <label>Dirección</label>
+                <input runat="server" name="dirección" type="text" id="dirección" class="form-control" placeholder="Ingrese la dirección " required="required">
+				</div>
+
+                <div class="form-group">
+                  <label>Contacto</label>
+                  <input runat="server" name="contac" id="contac" type="number" class="form-control" placeholder="Ingrese el contacto" required="required">
 			    </div>
 
                 <div class="form-group">
                   <label>Nombre</label>
-                  <input runat="server" name="nombre" type="text" id="nombre" class="form-control" placeholder="Ingrese el nombre del producto" required="required">
+                  <input runat="server" name="nombre" type="text" id="nombre" class="form-control" placeholder="Ingrese el nombre del usuario" required="required">
 				</div>
 
                 <div class="form-group">
@@ -30,7 +55,7 @@
                   <label>Clave</label>
                   <input runat="server" name="clave" id="clave" type="number" placeholder="Ingrese una contraseña" class="form-control" required="required">
 				</div>       
-                <asp:button runat="server" Text="Registrar" id="botonCli" type="submit" name="registrar" class="btn btn-primary" OnClick="botonCli_Click"></asp:button>
+                <asp:button runat="server" Text="Registrar" id="botonCli" type="submit" name="Registro" class="btn btn-primary" OnClick="Registrar"></asp:button>
 
 
 				    </div>
