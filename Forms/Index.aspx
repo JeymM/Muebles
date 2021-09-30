@@ -102,7 +102,7 @@ Inherits="Muebles.Forms.Index" %>
         class="col-md-9 gray-900 p-0"
       >
         <div class="w-100" style="background-image: url(../assets/img/backgroundindex.jpg); background-size: cover; background-repeat: no-repeat; width: 100%; height: 100%;">
-          
+            
           <div class="d-inline" style="width: 600px; height: 400px;">
             <div class="text-center  align-center">
               <!--
