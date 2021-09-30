@@ -1,11 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Forms/Administrador/AdministradorMain.Master" CodeBehind="VerificarClientes.aspx.cs" Inherits="Muebles.Forms.Administrador.VerificarClientes" %>
 
-<asp:Content ID="ContentAdministradorMain" ContentPlaceHolderID="AdministradorId" runat="server">
-    <!--<form id="form1" runat="server">
-        <div>
-
-        </div>
-    </form>-->
+<asp:Content ID="ContentAdministradorVerifyCustomer" ContentPlaceHolderID="AdministradorId" runat="server">
     <div class="container">
 
 		<div class="row">

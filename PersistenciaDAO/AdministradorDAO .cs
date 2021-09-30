@@ -40,7 +40,7 @@ namespace Muebles
         }
         public string Insercion()
         {
-            return "Insert into administrador(id_a,nombre,tel_admi,correo,clave) values(" + id_ad + ",'" + nom + "', '" + tel_ad + "'," + correo + "," + clave + ");";
+            return "Insert into administrador(id_a,nombre,tel_admi,correo,clave) values(" + id_ad + ",'" + nom + "', '" + tel_ad + "', '" + correo + "','" + clave + "');";
         }
         public string Actualizacion()
         {
