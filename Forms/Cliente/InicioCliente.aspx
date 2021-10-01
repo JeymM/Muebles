@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Cliente/clienteMain.Master"  AutoEventWireup="true" CodeBehind="InicioCliente.aspx.cs" Inherits="Muebles.Forms.Cliente.InicioCliente" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Cliente/ClienteMain.Master"  AutoEventWireup="true" CodeBehind="InicioCliente.aspx.cs" Inherits="Muebles.Forms.Cliente.InicioCliente" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
