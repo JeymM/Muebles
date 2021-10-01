@@ -44,7 +44,7 @@
             Productos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Inventario.aspx");%>>Insertar Inventario</a></li>
+            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Inventario.aspx");%>>Inventario</a></li>
             <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Ventas.aspx");%>>Ventas Realizadas</a></li> 
             <li><a class="dropdown-item" href="#">Something otro item</a></li>
           </ul>

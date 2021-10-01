@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="card">
-					<div class="card-header bg-info text-white" id="tab">Productos</div>
+					<div class="card-header bg-info text-white" id="tab">Clientes Registrados</div>
 					<div class="card-body">
 
 						<div class="form-group">
@@ -22,7 +22,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								 
+								 <% listarCliente(); %>
 							</tbody>
 						</table>
 					</div>

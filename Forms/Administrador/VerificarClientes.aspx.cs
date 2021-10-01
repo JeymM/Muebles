@@ -11,31 +11,17 @@ namespace Muebles.Forms.Administrador
 {
     public partial class VerificarClientes : System.Web.UI.Page
     {
-        public static DTO.ClienteDTO cl = new DTO.ClienteDTO();
-        DataTable tabla = new DataTable();
-        private object tab;
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            tabla.Columns.Add("Id cliente");
-            tabla.Columns.Add("Nombre");
-            tabla.Columns.Add("Correo");
         }
         public void listarCliente()
         {
-            DTO.ClienteDTO cli = new DTO.ClienteDTO();
-            cli.consultarTodos();
-
-            String tabla = "<table border=1>";
-            String[] col = { "Id", "Nombre", "Correo"};
-            tabla = tabla + "<tr>";
-            for (int i = 0; i < 3; i++)
-            {
-                tabla = tabla + "<th>" + col[i] + "</th>";
-            }
-            tabla = tabla + "</tr>";
+            ClienteDTO cli = new ClienteDTO();
+            
             foreach (ClienteDTO dat in cli.consultarTodos())
             {
+<<<<<<< HEAD
                 tabla = tabla + "<tr>";
                 tabla = tabla + "<td>" + cli.id + "</td>";
                 tabla = tabla + "<td>" + cli.nomb + "</td>";
@@ -52,6 +38,17 @@ namespace Muebles.Forms.Administrador
            
             
 
+=======
+                Response.Write("<tr>");
+                Response.Write("<td>"+ dat.id+ "</td>");
+                Response.Write("<td>"+ dat.nomb+"</td>");
+                Response.Write("<td>" +dat.correo+"</td>");
+                Response.Write("<td>");
+                Response.Write("<a class='btn btn-info'><i>Eliminar</i></a>");
+                Response.Write("</td>");
+                Response.Write("</tr>");
+            }
+>>>>>>> 7e8c006b428576e6129bca0683bbcc9a8db88108
         }
     }
 }
