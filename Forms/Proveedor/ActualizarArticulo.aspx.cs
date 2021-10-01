@@ -16,6 +16,7 @@ namespace Muebles.Forms.Proveedor
         public string name = "";
         public string cant = "";
         public string prec = "";
+        public string estado = "";
 
         private ArticuloDTO articuloDTO;
         protected void Page_Load(object sender, EventArgs e)
@@ -26,18 +27,20 @@ namespace Muebles.Forms.Proveedor
             prec = Convert.ToString(Request.QueryString["prec"]);
             descrip = Convert.ToString(Request.QueryString["descrip"]);
             name = Convert.ToString(Request.QueryString["name"]);
+            estado = Convert.ToString(Request.QueryString["estado"]);
             //se asignan los datos al formulario
             idProducto.Value = id;
             precio.Value = prec;
             descripcion.Value = descrip;
             nombre.Value = name;
+            
         }
 
         protected void actualizar_cli(object sender, EventArgs e)
         {   //id,stock, precio, desc, nombre
             if(stock.Value != null)
             {
-                articuloDTO = new ArticuloDTO(idProducto.Value, stock.Value, precio.Value, descripcion.Value, nombre.Value);
+                articuloDTO = new ArticuloDTO(idProducto.Value, stock.Value, precio.Value, descripcion.Value, nombre.Value,estado);
                 articuloDTO.actualizar();
             }
             

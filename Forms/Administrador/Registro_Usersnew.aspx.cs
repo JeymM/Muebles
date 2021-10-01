@@ -23,29 +23,37 @@ namespace Muebles.Forms.Administrador
             {
                 ClienteDTO obj = new ClienteDTO(iduser.Value, nombre.Value, email.Value, clave.Value);
                 obj.insertar();
-                MessageBox.Show("hello world :");
+                MessageBox.Show("Registro exitoso");
             }
             else if (ingreso == "Administrador")
             {
 
                 AdministradorDTO obj1 = new AdministradorDTO(iduser.Value, nombre.Value, contac.Value, email.Value, clave.Value);
                 obj1.insertar();
-                MessageBox.Show("entro :");
+                MessageBox.Show("Registro exitoso");
             }
 
         else if (ingreso == "Proveedor")
             {
                 ProveedorDTO obj = new ProveedorDTO(iduser.Value, contac.Value, dirección.Value, nombre.Value, email.Value, clave.Value);
         obj.insertar();
-                MessageBox.Show("hello world :");
+                MessageBox.Show("Registro exitoso");
             }
-                   
-                       
-                       
-                    
-                   
 
+           
             }
+        protected void vaciarCampos()
+        {
+            iduser.Value = "";
+            nombre.Value = "";
+            dirección.Value = "";
+            contac.Value = "";
+            email.Value = "";
+            clave.Value = "";
+
+
+
+        }
         }
     }
 

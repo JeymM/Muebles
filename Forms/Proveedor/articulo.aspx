@@ -36,7 +36,13 @@
                   <label>Stock</label>
                   <input runat="server" name="stock" id="stock" type="number" class="form-control" placeholder="Ingrese el stock del producto" required="required">
 				</div>
+                 
                         
+               <div class="form-group">
+                 <label>estado</label>
+                 <input runat="server" name="estado" id="estado" type="number" class="form-control"  placeholder="Estado" required="required">
+				</div>
+				</div>
                 <asp:button runat="server" Text="Registrar" id="botonCli" type="submit" name="registrar" class="btn btn-primary" OnClick="botonCli_Click"></asp:button>
 
 

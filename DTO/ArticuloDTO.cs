@@ -13,6 +13,8 @@ namespace Muebles.DTO
         public double prec { get; set; }
         public string descrip { get; set; }
         public string nombre { get; set; }
+        public int estado { get; set; }
+
         public List<ArticuloDTO> articulos;
         private ArticuloDAO AD;
         private Conexion conexion;
@@ -22,15 +24,16 @@ namespace Muebles.DTO
             this.AD = new ArticuloDAO();
         }
 
-        public ArticuloDTO(string ide, string id_provee, string prec, string descrip,string nombre)
+        public ArticuloDTO(string ide, string id_provee, string prec, string descrip,string nombre,string estado)
         {
             this.conexion = new Conexion();
-            this.AD = new ArticuloDAO(ide, id_provee, prec,descrip,nombre);
+            this.AD = new ArticuloDAO(ide, id_provee, prec,descrip,nombre,estado);
             this.ide = int.Parse(ide);
             this.id_provee = int.Parse(id_provee);
             this.prec = double.Parse(prec);
             this.descrip = descrip;
             this.nombre = nombre;
+            this.estado =int.Parse(estado);
         }
         public void insertar()
         {
@@ -48,7 +51,7 @@ namespace Muebles.DTO
             ArticuloDTO a;
             while (conexion.resultado.Read())
             {
-                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4));
+                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), "" + conexion.resultado.GetInt32(5));
                 articulos.Add(a);
                 i++;
             }

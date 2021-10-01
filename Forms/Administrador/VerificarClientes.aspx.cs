@@ -41,9 +41,15 @@ namespace Muebles.Forms.Administrador
                 tabla = tabla + "<td>" + cli.nomb + "</td>";
                 tabla = tabla + "<td>" + cli.correo + "</td>";
                 tabla = tabla + "</tr>";
+                Response.Write("<td>");
+                Response.Write("<a class='btn btn-info' href='./ActualizarCliente.aspx" +
+                    "?id=" + cli.id +
+                    "&name=" + cli.correo + "'><i>Actualizar</i></a>");
+                Response.Write("</td>");
+
+                Response.Write("</tr>");
             }
-            tabla = tabla + "</table>";
-            tab = tab + tabla;
+           
             
 
         }

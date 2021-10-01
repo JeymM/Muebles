@@ -7,21 +7,21 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Muebles.Forms.Proveedor
+namespace Muebles.Forms.Administrador
 {
 
 
-    public partial class articulo
+    public partial class ActualizarCliente
     {
 
         /// <summary>
-        /// Control idProducto.
+        /// Control idcliente.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl idProducto;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl idcliente;
 
         /// <summary>
         /// Control nombre.
@@ -33,40 +33,22 @@ namespace Muebles.Forms.Proveedor
         protected global::System.Web.UI.HtmlControls.HtmlInputText nombre;
 
         /// <summary>
-        /// Control descripcion.
+        /// Control email.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText descripcion;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText email;
 
         /// <summary>
-        /// Control precio.
+        /// Control clave.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl precio;
-
-        /// <summary>
-        /// Control stock.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl stock;
-
-        /// <summary>
-        /// Control estado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl estado;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl clave;
 
         /// <summary>
         /// Control botonCli.

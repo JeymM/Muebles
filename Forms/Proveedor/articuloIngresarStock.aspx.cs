@@ -29,6 +29,7 @@ namespace Muebles.Forms.Proveedor
                 Response.Write("<td>" + arti.prec + "</td>");
                 Response.Write("<td>" + arti.descrip + "</td>");
                 Response.Write("<td>" + arti.nombre + "</td>");
+                Response.Write("<td>" + arti.estado + "</td>");
                 Response.Write("<td>");
                 Response.Write("<a class='btn btn-info' href='./ActualizarArticulo.aspx"+
                     "?ide=" + arti.ide+

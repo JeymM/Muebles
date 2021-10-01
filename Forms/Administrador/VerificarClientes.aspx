@@ -18,6 +18,7 @@
 									<th scope="col">ID Cliente</th>
 									<th scope="col">Nombre</th>
 									<th scope="col">Correo</th>
+									<th scope="col">Actualizar Datos</th>
 								</tr>
 							</thead>
 							<tbody>
