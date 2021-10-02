@@ -15,40 +15,31 @@ namespace Muebles.Forms.Administrador
     {
 
         /// <summary>
-        /// Control idcliente.
+        /// Control id_c.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl idcliente;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl id_c;
 
         /// <summary>
-        /// Control nombre.
+        /// Control nombre_c.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nombre;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nombre_c;
 
         /// <summary>
-        /// Control email.
+        /// Control correo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText email;
-
-        /// <summary>
-        /// Control clave.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl clave;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText correo;
 
         /// <summary>
         /// Control botonCli.

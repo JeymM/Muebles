@@ -36,7 +36,8 @@ namespace Muebles.Forms.Proveedor
                     "&cant=" + arti.id_provee+
                     "&prec=" + arti.prec+
                     "&descrip=" + arti.descrip+
-                    "&name=" + arti.nombre+"'><i>Actualizar</i></a>");
+                    "&name=" + arti.nombre+
+                    "&descrip=" + arti.descrip + "'><i>Actualizar</i></a>");
                 Response.Write("</td>");                
 
                 Response.Write("</tr>");

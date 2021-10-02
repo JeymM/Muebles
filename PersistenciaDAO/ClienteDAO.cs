@@ -7,7 +7,7 @@ namespace Muebles
 {
     public class ClienteDAO
     {
-        public int id;
+        public string id;
         public string nomb;
         public string correo;
         public string clave;
@@ -18,7 +18,7 @@ namespace Muebles
 
         public ClienteDAO(string id="",string nomb="",string correo="",string clave="")
         {
-            this.id = int.Parse(id);
+            this.id = id;
             this.nomb = nomb;
             this.correo = correo;
             this.clave = clave;
@@ -45,7 +45,7 @@ namespace Muebles
         }
         public string Actualizacion()
         {
-            return "update cliente set " + "nombre='" + correo + "','" + clave + "' where id = " + id + "";
+            return "update cliente set " + "nombre="+ nomb + " "+ correo + "," + clave + " where id = " + id + " ";
 
         }
         public string Eliminar()
