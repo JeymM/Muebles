@@ -12,19 +12,20 @@ namespace Muebles
         private int tel_ad;
         private string correo;
         private string clave;
-
+        private int estado;
         public AdministradorDAO()
         {
 
         }
 
-        public AdministradorDAO(string id_ad,string nom,string tel_ad, string correo, string clave)
+        public AdministradorDAO(string id_ad,string nom,string tel_ad, string correo, string clave, int estado)
         {
             this.id_ad = int.Parse(id_ad);
             this.nom = nom;
             this.tel_ad = int.Parse(tel_ad);
             this.correo = correo;
             this.clave = clave;
+            this.estado = estado;
         }
         public string Buscar(string filtro)
         {
@@ -34,13 +35,21 @@ namespace Muebles
         {
             return "Select * from administrador where id_a='" + id_ad + "'";
         }
+        public string ConsultarActivos()
+        {
+            return "Select * from administrador where estado=" + estado + "";
+        }
         public string Consulta_T()
         {
             return "Select * from administrador ";
         }
         public string Insercion()
         {
-            return "Insert into administrador(id_a,nombre,tel_admi,correo,clave) values(" + id_ad + ",'" + nom + "', '" + tel_ad + "', '" + correo + "','" + clave + "');";
+            return "Insert into administrador(id_a,nombre,tel_admi,correo,clave,estado) values(" + id_ad + ",'" + nom + "', '" + tel_ad + "', '" + correo + "','" + clave + "',"+estado+");";
+        }
+        public string ActualizacionEstado()
+        {
+            return "update administrador set " + "estado=" + estado + " where id_a=" + id_ad + "";
         }
         public string Actualizacion()
         {

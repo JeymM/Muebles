@@ -32,6 +32,10 @@
                   <label>Precio</label>
                   <input runat="server" name="precio" id="precio" type="number" placeholder="Ingrese el precio del producto" class="form-control" required="required" disabled>
 				</div>
+                <div class="form-group">
+                  <label>Estado</label>
+                  <input runat="server" name="inputEstado" id="inputEstado" type="text" placeholder="Estado Producto" class="form-control" required="required" disabled>
+				</div>
 
                 <div class="form-group">
                   <label>Stock</label>

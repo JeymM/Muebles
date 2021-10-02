@@ -34,11 +34,18 @@ namespace Muebles.Forms
                 {
                     if (corr.Equals(clientes.correo) && pass.Equals(clientes.clave))//comparar con correo y clave de la BD
                     {
-                        Session["id"] = clientes.id;
-                        Session["nombre"] = clientes.nomb;
-                        Session["correo"] = clientes.correo;
-                        Session["clave"] = clientes.clave;
-                        Response.Redirect(Session["url"] + "/Cliente/sesionsesioncliente.aspx");
+                        if (clientes.estado == 1)
+                        {
+                            Session["id"] = clientes.id;
+                            Session["nombre"] = clientes.nomb;
+                            Session["correo"] = clientes.correo;
+                            Session["clave"] = clientes.clave;
+                            Response.Redirect(Session["url"] + "/Cliente/sesionsesioncliente.aspx");
+                        } else
+                        {
+                            string script = String.Format(@"<script type='text/javascript'>alert('Usuario desactivado' );</script>", "0033");
+                            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                        }
                     }
                 }
 
@@ -53,14 +60,23 @@ namespace Muebles.Forms
                     {
                         if (corr.Equals(proveedores.correo) && pass.Equals(proveedores.clave))//comparar con correo y clave de la BD
                         {
-                            Session["nit"] = proveedores.nit;
-                            Session["contacto"] = proveedores.contac;
-                            Session["direccion"] = proveedores.dir;
-                            Session["nombre"] = proveedores.nombr;
-                            Session["correo"] = proveedores.correo;
-                            Session["clave"] = proveedores.clave;
+                            if (proveedores.estado == 1)
+                            {
+                                Session["nit"] = proveedores.nit;
+                                Session["contacto"] = proveedores.contac;
+                                Session["direccion"] = proveedores.dir;
+                                Session["nombre"] = proveedores.nombr;
+                                Session["correo"] = proveedores.correo;
+                                Session["clave"] = proveedores.clave;
 
-                            Response.Redirect(Session["url"] + "/Proveedor/sesionproveedor.aspx");
+                                Response.Redirect(Session["url"] + "/Proveedor/sesionproveedor.aspx");
+                            }
+                            else
+                            {
+                                string script = String.Format(@"<script type='text/javascript'>alert('Usuario desactivado' );</script>", "0033");
+                                ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                            }
+
                         }
                         //MessageBox.Show("datos de la db:\n" + proveedores.correo + proveedores.clave);
                     }
@@ -76,12 +92,20 @@ namespace Muebles.Forms
                         {
                             if (corr.Equals(administradores.correo) && pass.Equals(administradores.clave))//comparar con correo y clave de la BD
                             {
-                                Session["id_a"] = administradores.id_ad;
-                                Session["nombre"] = administradores.nom;
-                                Session["tel_admi"] = administradores.tel_ad;
-                                Session["correo"] = administradores.correo;
-                                Session["clave"] = administradores.clave;
-                                Response.Redirect(Session["url"] + "/Administrador/sesionsesionadministrador.aspx");
+                                if(administradores.estado == 1)
+                                {
+                                    Session["id_a"] = administradores.id_ad;
+                                    Session["nombre"] = administradores.nom;
+                                    Session["tel_admi"] = administradores.tel_ad;
+                                    Session["correo"] = administradores.correo;
+                                    Session["clave"] = administradores.clave;
+                                    Response.Redirect(Session["url"] + "/Administrador/sesionsesionadministrador.aspx");
+                                }
+                                else
+                                {
+                                    string script = String.Format(@"<script type='text/javascript'>alert('Usuario desactivado' );</script>", "0033");
+                                    ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+                                }
                             }
                         }
 

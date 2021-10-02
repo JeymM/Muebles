@@ -18,7 +18,8 @@
 									<th scope="col">ID Cliente</th>
 									<th scope="col">Nombre</th>
 									<th scope="col">Correo</th>
-									<th scope="col">Actualizar Datos</th>
+									<th scope="col">Estado</th>
+									<th scope="col">Habilitar/Deshabilitar</th>
 								</tr>
 							</thead>
 							<tbody>

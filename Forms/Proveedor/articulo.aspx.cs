@@ -18,7 +18,7 @@ namespace Muebles.Forms.Proveedor
 
         protected void botonCli_Click(object sender, EventArgs e)
         {   //id,stock, precio, desc, nombre
-            ar = new ArticuloDTO(idProducto.Value, stock.Value, precio.Value, descripcion.Value, nombre.Value,estado.Value);
+            ar = new ArticuloDTO(idProducto.Value, stock.Value, precio.Value, descripcion.Value, nombre.Value, 1);
             ar.insertar();
             vaciarCampos();
         }
@@ -29,7 +29,6 @@ namespace Muebles.Forms.Proveedor
             precio.Value = "";
             descripcion.Value = "";
             nombre.Value = "";
-            estado.Value = "";
         }
     }
 }

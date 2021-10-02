@@ -12,6 +12,7 @@ namespace Muebles.DTO
         public string nomb { get; set; }
         public string correo { get; set; }
         public string clave { get; set; }
+        public int estado { get; set; }
         public List<ClienteDTO> clientes;
         private ClienteDAO CD;
         private Conexion conexion;
@@ -21,14 +22,15 @@ namespace Muebles.DTO
             this.CD = new ClienteDAO();
         }
 
-        public ClienteDTO(string id = "", string nomb = "",string correo="",string clave="")
+        public ClienteDTO(string id, string nomb,string correo,string clave, int estado)
         {
             this.conexion = new Conexion();
             this.id = id;
             this.nomb = nomb;
             this.correo = correo;
             this.clave = clave;
-            this.CD = new ClienteDAO(id, nomb, correo, clave);
+            this.estado = estado;
+            this.CD = new ClienteDAO(id, nomb, correo, clave, estado);
         }
         
         public void insertar()
@@ -47,7 +49,7 @@ namespace Muebles.DTO
             ClienteDTO c;
             while (conexion.resultado.Read())
             {
-                c = new ClienteDTO("" + conexion.resultado.GetString(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3));
+                c = new ClienteDTO("" + conexion.resultado.GetString(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3), conexion.resultado.GetInt32(4));
                 clientes.Add(c);
                 i++;
             }

@@ -32,15 +32,17 @@ CREATE TABLE `administrador` (
   `nombre` varchar(50) NOT NULL,
   `tel_admi` int(11) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `clave` varchar(50) NOT NULL
+  `clave` varchar(50) NOT NULL,
+  `estado`	tinyint(1)	NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `administrador`
 --
 
-INSERT INTO `administrador` (`id_a`, `nombre`, `tel_admi`, `correo`, `clave`) VALUES
-(1, 'carlos', 4988, 'car@hotmail.com', '45');
+INSERT INTO `administrador` (`id_a`, `nombre`, `tel_admi`, `correo`, `clave`, `estado`) VALUES
+(1, 'carlos', 4988, 'car@hotmail.com', '45',1),
+(1012, 'admin', 4988, 'admin@gmail.com', '123',1);
 
 -- --------------------------------------------------------
 
@@ -53,21 +55,22 @@ CREATE TABLE `articulo` (
   `nit_fk` int(11) NOT NULL,
   `precio` double NOT NULL,
   `descripcion` varchar(100) DEFAULT NULL,
-  `nombre` varchar(50) NOT NULL
+  `nombre` varchar(50) NOT NULL,
+  `estado`	tinyint(1)	NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `articulo`
 --
 
-INSERT INTO `articulo` (`id`, `nit_fk`, `precio`, `descripcion`, `nombre`) VALUES
-(1, 88, 10000, 'silla abc', ''),
-(3, 88, 10200, 'marrano', ''),
-(5, 88, 10100, 'computador', ''),
-(6, 3, 52000, 'articulo para el baño', 'lavamanos'),
-(7, 5, 45000, 'categoria mesas', 'mesa escritorio'),
-(25, 1, 1500000, 'mueble para sala', 'sofa'),
-(74, 10, 150000, 'categoria alcoba', 'silla escritorio');
+INSERT INTO `articulo` (`id`, `nit_fk`, `precio`, `descripcion`, `nombre`, `estado`) VALUES
+(1, 88, 10000, 'silla abc', '', 1),
+(3, 88, 10200, 'marrano', '', 0),
+(5, 88, 10100, 'computador', '', 1),
+(6, 3, 52000, 'articulo para el baño', 'lavamanos', 1),
+(7, 5, 45000, 'categoria mesas', 'mesa escritorio', 1),
+(25, 1, 1500000, 'mueble para sala', 'sofa', 1),
+(74, 10, 150000, 'categoria alcoba', 'silla escritorio', 1);
 
 -- --------------------------------------------------------
 
@@ -92,17 +95,18 @@ CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `clave` varchar(50) NOT NULL
+  `clave` varchar(50) NOT NULL,
+  `estado`	tinyint(1)	NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nombre`, `correo`, `clave`) VALUES
-(45, 'Paola', 'pao@gmail.com', '12'),
-(123, 'Paola', '', ''),
-(458, 'Pedro', '', '');
+INSERT INTO `cliente` (`id`, `nombre`, `correo`, `clave`, `estado`) VALUES
+(45, 'Paola', 'pao@gmail.com', '12', 1),
+(123, 'jairo', 'client@gmail.com', '123', 1),
+(458, 'Pedro', 'cliente@gmail.com', '123', 0);
 
 -- --------------------------------------------------------
 
@@ -150,16 +154,20 @@ CREATE TABLE `proveedor` (
   `direccion` varchar(45) NOT NULL,
   `nombre` varchar(45) NOT NULL,
   `correo` varchar(50) NOT NULL,
-  `clave` varchar(50) NOT NULL
+  `clave` varchar(50) NOT NULL,
+  `estado`	tinyint(1)	NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `proveedor`
 --
 
-INSERT INTO `proveedor` (`nit`, `contacto`, `direccion`, `nombre`, `correo`, `clave`) VALUES
-(88, '3165345', 'calle 5#28-05', 'Brandon', 'bo@gmail.com', '123');
-
+INSERT INTO `proveedor` (`nit`, `contacto`, `direccion`, `nombre`, `correo`, `clave`, `estado`) VALUES
+(88, '3165345', 'calle 5#28-05', 'Brandon', 'bo@gmail.com', '123', 1);
+INSERT INTO `proveedor` (`nit`, `contacto`, `direccion`, `nombre`, `correo`, `clave`, `estado`) VALUES
+(89, '3441223', 'calle 5#24-05', 'prove', 'prove@gmail.com', '123', 1);
+INSERT INTO `proveedor` (`nit`, `contacto`, `direccion`, `nombre`, `correo`, `clave`, `estado`) VALUES
+(84, '3441262', 'calle 5#24-05', 'proveunactive', 'proveunactive@gmail.com', '123', 0);
 -- --------------------------------------------------------
 
 --

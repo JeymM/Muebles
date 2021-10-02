@@ -13,7 +13,7 @@ Inherits="Muebles.Forms.Index" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title>Muebles</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,101 +22,105 @@ Inherits="Muebles.Forms.Index" %>
     />
   </head>
   <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-3 bg-dark h-100" style="height: 100vh">
-        <form class="h-100" runat="server">
-          <p class="center fs-3 text-center text-light py-3">Iniciar sesión</p>
-          <div class="mb-2 px-3">
-            <label for="dropList" class="form-label text-light"
-              >Seleccione el tipo de usuario</label
-            >
-            <select id="dropList" name="dropList" class="form-select">
-              <option>Cliente</option>
-              <option>Proveedor</option>
-              <option>Administrador</option>
-            </select>
-          </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 bg-dark h-100" style="height: 100vh">
+          <form class="h-100" runat="server">
+            <p class="center fs-3 text-center text-light py-3">
+              Iniciar sesión
+            </p>
+            <div class="mb-2 px-3">
+              <label for="dropList" class="form-label text-light"
+                >Seleccione el tipo de usuario</label
+              >
+              <select id="dropList" name="dropList" class="form-select">
+                <option>Cliente</option>
+                <option>Proveedor</option>
+                <option>Administrador</option>
+              </select>
+            </div>
+            <div class="mb-2 px-3">
+              <input
+                name="correo"
+                type="text"
+                class="form-control"
+                id="correo"
+                runat="server"
+                placeholder="Ingresa su email"
+              />
+            </div>
+            <div class="mb-2 px-3">
+              <input
+                id="password"
+                runat="server"
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                class="form-control"
+              />
+            </div>
+            <asp:Button
+              ID="BtnIngresar"
+              runat="server"
+              OnClick="BtnIngresar_Click"
+              class="btn btn-primary w-75 p-2 mx-5 align-center text-center"
+              Text="Ingresar"
+            />
+          </form>
+          <p class="fs-5 text-light text-center texet-muted py-2">
+            ¿No tienes una cuenta?, ¡Crea una en el siguiente formulario
+          </p>
+
+          <p class="center fs-3 text-center text-light">Registrarse</p>
           <div class="mb-2 px-3">
             <input
-              name="correo"
+              name="correoRegistro"
               type="text"
               class="form-control"
-              id="correo"
+              id="correoRegistro"
               runat="server"
               placeholder="Ingresa su email"
             />
           </div>
           <div class="mb-2 px-3">
             <input
-              id="password"
+              id="passwordRegistro"
               runat="server"
               type="password"
-              name="password"
+              name="passwordRegistro"
               placeholder="Contraseña"
               class="form-control"
             />
           </div>
-          <asp:Button
-            ID="BtnIngresar"
+          <button
             runat="server"
-            OnClick="BtnIngresar_Click"
-            class="btn btn-primary w-75 p-2 mx-5 align-center text-center"
-            Text="Ingresar"
-          />
-        </form>
-        <p class="fs-5 text-light text-center texet-muted py-2">
-          ¿No tienes una cuenta?, ¡Crea una en el siguiente formulario
-        </p>
-
-        <p class="center fs-3 text-center text-light">Registrarse</p>
-        <div class="mb-2 px-3">
-          <input
-            name="correoRegistro"
-            type="text"
-            class="form-control"
-            id="correoRegistro"
-            runat="server"
-            placeholder="Ingresa su email"
-          />
+            OnClick="BtnRegistrar_Click"
+            class="btn btn-primary w-75 p-2 mx-5 align-center text-center mb-2"
+          >
+            Registrar
+          </button>
         </div>
-        <div class="mb-2 px-3">
-          <input
-            id="passwordRegistro"
-            runat="server"
-            type="password"
-            name="passwordRegistro"
-            placeholder="Contraseña"
-            class="form-control"
-          />
-        </div>
-        <button
-          runat="server"
-          OnClick="BtnRegistrar_Click"
-          class="btn btn-primary w-75 p-2 mx-5 align-center text-center mb-2"
-        >
-          Registrar
-        </button>
-      </div>
-      <div
-        class="col-md-9 gray-900 p-0"
-      >
-        <div class="w-100" style="background-image: url(../assets/img/backgroundindex.jpg); background-size: cover; background-repeat: no-repeat; width: 100%; height: 100%;">
-            
-          <div class="d-inline" style="width: 600px; height: 400px;">
-            <div class="text-center  align-center">
-              <!--
+        <div class="col-md-9 gray-900 p-0">
+          <div
+            class="w-100"
+            style="
+              background-image: url(../assets/img/backgroundindex.jpg);
+              background-size: cover;
+              background-repeat: no-repeat;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <div class="d-inline" style="width: 600px; height: 400px">
+              <div class="text-center align-center">
+                <!--
                 <h1 class="display-5 fw-bold text-center text-Dark" >ConfortMuebles</h1>
-              -->
-              
+              --></div>
             </div>
           </div>
-
         </div>
-        
       </div>
     </div>
-  </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"

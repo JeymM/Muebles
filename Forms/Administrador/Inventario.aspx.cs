@@ -17,7 +17,7 @@ namespace Muebles.Forms.Administrador
         public void listaInventario()
         {
             ArticuloDTO inv = new ArticuloDTO();
-            String col;
+            String col = "";
 
             foreach (ArticuloDTO pro in inv.consultarTodos())
             {

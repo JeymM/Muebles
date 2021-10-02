@@ -21,21 +21,21 @@ namespace Muebles.Forms.Administrador
         {
             if (ingreso == "Cliente")
             {
-                ClienteDTO obj = new ClienteDTO(iduser.Value, nombre.Value, email.Value, clave.Value);
+                ClienteDTO obj = new ClienteDTO(iduser.Value, nombre.Value, email.Value, clave.Value, 1);
                 obj.insertar();
                 MessageBox.Show("Registro exitoso");
             }
             else if (ingreso == "Administrador")
             {
 
-                AdministradorDTO obj1 = new AdministradorDTO(iduser.Value, nombre.Value, contac.Value, email.Value, clave.Value);
+                AdministradorDTO obj1 = new AdministradorDTO(iduser.Value, nombre.Value, contac.Value, email.Value, clave.Value, 1);
                 obj1.insertar();
                 MessageBox.Show("Registro exitoso");
             }
 
         else if (ingreso == "Proveedor")
             {
-                ProveedorDTO obj = new ProveedorDTO(iduser.Value, contac.Value, dirección.Value, nombre.Value, email.Value, clave.Value);
+                ProveedorDTO obj = new ProveedorDTO(iduser.Value, contac.Value, dirección.Value, nombre.Value, email.Value, clave.Value, 1);
         obj.insertar();
                 MessageBox.Show("Registro exitoso");
             }

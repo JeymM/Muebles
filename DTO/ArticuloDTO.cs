@@ -24,7 +24,7 @@ namespace Muebles.DTO
             this.AD = new ArticuloDAO();
         }
 
-        public ArticuloDTO(string ide, string id_provee, string prec, string descrip,string nombre,string estado)
+        public ArticuloDTO(string ide, string id_provee, string prec, string descrip,string nombre, int estado)
         {
             this.conexion = new Conexion();
             this.AD = new ArticuloDAO(ide, id_provee, prec,descrip,nombre,estado);
@@ -33,7 +33,7 @@ namespace Muebles.DTO
             this.prec = double.Parse(prec);
             this.descrip = descrip;
             this.nombre = nombre;
-            this.estado =int.Parse(estado);
+            this.estado = estado;
         }
         public void insertar()
         {
@@ -51,7 +51,25 @@ namespace Muebles.DTO
             ArticuloDTO a;
             while (conexion.resultado.Read())
             {
-                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), "" + conexion.resultado.GetInt32(5));
+                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), conexion.resultado.GetInt32(5));
+                articulos.Add(a);
+                i++;
+            }
+
+            this.conexion.cerrar();
+            return articulos;
+        }
+        public List<ArticuloDTO> consultarActivos()
+        {
+            articulos = new List<ArticuloDTO>();
+
+
+            int i = 0;
+            this.conexion.ejecutar(this.AD.Consultar());
+            ArticuloDTO a;
+            while (conexion.resultado.Read())
+            {
+                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), conexion.resultado.GetInt32(5));
                 articulos.Add(a);
                 i++;
             }

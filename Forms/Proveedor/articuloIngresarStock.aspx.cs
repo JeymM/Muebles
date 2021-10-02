@@ -18,18 +18,31 @@ namespace Muebles.Forms.Proveedor
         }
         public void listArticulos()
         {
-
+            string statusString = "";
             ArticuloDTO ar = new ArticuloDTO();
 
-            foreach (ArticuloDTO arti in ar.consultarTodos())
+            foreach (ArticuloDTO arti in ar.consultarActivos())
             {
+                if (arti.estado == 1)
+                {
+                    statusString = "Activo";
+                }
+                else if (arti.estado == 0)
+                {
+                    statusString = "Desactivado";
+                }
+                else
+                {
+                    statusString = "Indefinido";
+                }
+
                 Response.Write("<tr>");
                 Response.Write("<td>" + arti.ide + "</td>");
                 Response.Write("<td>" + arti.id_provee + "</td>");
                 Response.Write("<td>" + arti.prec + "</td>");
                 Response.Write("<td>" + arti.descrip + "</td>");
                 Response.Write("<td>" + arti.nombre + "</td>");
-                Response.Write("<td>" + arti.estado + "</td>");
+                Response.Write("<td>" + statusString + "</td>");
                 Response.Write("<td>");
                 Response.Write("<a class='btn btn-info' href='./ActualizarArticulo.aspx"+
                     "?ide=" + arti.ide+
@@ -37,6 +50,7 @@ namespace Muebles.Forms.Proveedor
                     "&prec=" + arti.prec+
                     "&descrip=" + arti.descrip+
                     "&name=" + arti.nombre+
+                    "&estado=" + arti.estado +
                     "&descrip=" + arti.descrip + "'><i>Actualizar</i></a>");
                 Response.Write("</td>");                
 
@@ -44,12 +58,5 @@ namespace Muebles.Forms.Proveedor
 
             }
         }
-
-        public void SubmitBtn_Click(Object sender, EventArgs e)
-        {
-            Console.WriteLine("entre");
-            HttpContext.Current.Response.Write("entre");
-        }
-
     }
 }

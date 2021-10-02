@@ -12,6 +12,7 @@ namespace Muebles.DTO
         public int tel_ad { get; set; }
         public string correo { get; set; }
         public string clave { get; set; }
+        public int estado { get; set; }
         public List<AdministradorDTO> administradores;
         private AdministradorDAO AD;
         private Conexion conexion;
@@ -22,16 +23,16 @@ namespace Muebles.DTO
             this.AD = new AdministradorDAO();
         }
 
-        public AdministradorDTO(string id_ad, string nom, string tel_ad,string correo,string clave)
+        public AdministradorDTO(string id_ad, string nom, string tel_ad,string correo,string clave, int estado)
         {
             this.conexion = new Conexion();
-            this.AD = new AdministradorDAO(id_ad,nom,tel_ad,correo,clave);
+            this.AD = new AdministradorDAO(id_ad,nom,tel_ad,correo,clave, estado);
             this.id_ad = int.Parse(id_ad);
             this.nom = nom;
             this.tel_ad = int.Parse(tel_ad);
             this.correo = correo;
-            this.clave = clave; 
-
+            this.clave = clave;
+            this.estado = estado;
         }
         public void insertar()
         {
@@ -48,7 +49,7 @@ namespace Muebles.DTO
             AdministradorDTO a;
             while (conexion.resultado.Read())
             {
-                a = new AdministradorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4));
+                a = new AdministradorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), conexion.resultado.GetInt32(5));
                 administradores.Add(a);
                 i++;
             }

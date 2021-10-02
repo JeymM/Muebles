@@ -12,14 +12,14 @@ namespace Muebles
         private double prec;
         private string descrip;
         private string nombre;
-        public string estado;
+        public int estado;
 
         public ArticuloDAO()
         {
 
         }
         
-        public ArticuloDAO(string ide,string id_provee,string prec,string descrip,string nombre,string estado)
+        public ArticuloDAO(string ide,string id_provee,string prec,string descrip,string nombre,int estado)
         {
             this.ide = int.Parse(ide);
             this.id_provee = int.Parse(id_provee);
@@ -34,7 +34,7 @@ namespace Muebles
         }
         public string Consultar()
         {
-            return "Select * from articulo where id='" + ide + " '";
+            return "Select * from articulo where estado=" + 1 + "";
         }
         public string Consulta_T()
         {
@@ -42,7 +42,7 @@ namespace Muebles
         }
         public string Insercion()
         {
-            return "Insert into articulo(id,nit_fk,precio,descripcion,nombre,estado) values(" + ide + ",'" + id_provee + "', '" + prec + "','" + descrip + "','" + nombre + "','"+ estado +"');";
+            return "Insert into articulo(id,nit_fk,precio,descripcion,nombre,estado) values(" + ide + ",'" + id_provee + "', '" + prec + "','" + descrip + "','" + nombre + "',"+ estado +");";
         }
         public string Actualizacion()
         {

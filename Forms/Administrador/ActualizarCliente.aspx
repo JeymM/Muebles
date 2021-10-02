@@ -22,13 +22,23 @@
 
                 <div class="form-group">
                   <label>Nombre</label>
-                  <input runat="server" name="nombre_c" type="text" id="nombre_c" class="form-control" placeholder="Ingrese el nombre" required="required">
+                  <input runat="server" name="nombre_c" type="text" id="nombre_c" class="form-control" placeholder="Ingrese el nombre" required="required" disabled>
 				</div>
 
                 <div class="form-group">
                   <label>Correo</label>
                   <input runat="server" name="correo" id="correo" type="text" class="form-control" placeholder="Ingrese el correo" required="required" disabled>
-				</div>      
+				</div>
+
+                <div class="form-group">
+                 <select name="selectedState" class="form-select">
+                    <option value="">-Seleccione una opción-</option>
+                    <optgroup label="Tipo Users">
+                       <option value="Activo" <%=estado == 1 ? "selected" : ""%>>Activo</option>
+                       <option value="Desactivado" <%=estado == 0 ? "selected" : ""%>>Desactivado</option>
+                    </optgroup>                 
+                 </select>
+                </div>                        
                 <asp:button runat="server" Text="Registrar" id="botonCli" type="submit" name="Actualizar" class="btn btn-primary" OnClick="actualizar_cli"></asp:button>
 				    </div>
 			    </div>

@@ -14,6 +14,7 @@ namespace Muebles.DTO
         public string nombr { get; set; }
         public string correo { get; set; }
         public string clave { get; set; }
+        public int estado { get; set; }
         public List<ProveedorDTO> proveedores;
         private ProveedorDAO PD;
         private Conexion conexion;
@@ -22,16 +23,17 @@ namespace Muebles.DTO
             this.conexion = new Conexion();
             this.PD = new ProveedorDAO();
         }
-        public ProveedorDTO(string nit, string contac, string dir, string nombr,string correo,string clave)
+        public ProveedorDTO(string nit, string contac, string dir, string nombr,string correo,string clave, int estado)
         {
             this.conexion = new Conexion();
-            this.PD = new ProveedorDAO(nit,contac,dir,nombr,correo,clave);
+            this.PD = new ProveedorDAO(nit,contac,dir,nombr,correo,clave, estado);
             this.nit = int.Parse(nit);
             this.contac = contac;
             this.dir = dir;
             this.nombr = nombr;
             this.correo = correo;
             this.clave = clave;
+            this.estado = estado;
         }
         public void insertar()
         {
@@ -49,7 +51,7 @@ namespace Muebles.DTO
             ProveedorDTO p;
             while (conexion.resultado.Read())
             {
-                p = new ProveedorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), "" + conexion.resultado.GetString(5));
+                p = new ProveedorDTO("" + conexion.resultado.GetInt32(0), conexion.resultado.GetString(1), "" + conexion.resultado.GetString(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), "" + conexion.resultado.GetString(5), conexion.resultado.GetInt32(6));
                 proveedores.Add(p);
                 //MessageBox.Show("datos de la db:\n" + proveedores[i].correo + proveedores[i].clave);
                 i++;

@@ -11,17 +11,19 @@ namespace Muebles
         public string nomb;
         public string correo;
         public string clave;
+        public int estado;
         public ClienteDAO()
         {
 
         }
 
-        public ClienteDAO(string id="",string nomb="",string correo="",string clave="")
+        public ClienteDAO(string id,string nomb,string correo,string clave, int estado)
         {
             this.id = id;
             this.nomb = nomb;
             this.correo = correo;
             this.clave = clave;
+            this.estado = estado;
         }
 
         //no se utiliza
@@ -33,7 +35,7 @@ namespace Muebles
 
         public string Consultar()
         {
-            return "Select * from cliente where id=" + id + "";
+            return "Select * from cliente where estado=" + 1 + "";
         }
         public string Consulta_T()
         {
@@ -41,12 +43,11 @@ namespace Muebles
         }
         public string Insercion ()
         {
-            return "Insert into cliente(id,nombre,correo,clave) values(" + id + ",'" + nomb + "', '" + correo + "','" + clave + "');";
+            return "Insert into cliente(id,nombre,correo,clave,estado) values(" + id + ",'" + nomb + "', '" + correo + "','" + clave + "',"+estado+");";
         }
         public string Actualizacion()
         {
-            return "update cliente set " + "nombre="+ nomb + " "+ correo + "," + clave + " where id = " + id + " ";
-
+            return "update cliente set " + "estado="+ estado + " where id=" + id + "";
         }
         public string Eliminar()
         {

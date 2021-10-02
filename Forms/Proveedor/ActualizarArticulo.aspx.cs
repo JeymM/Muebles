@@ -16,7 +16,7 @@ namespace Muebles.Forms.Proveedor
         public string name = "";
         public string cant = "";
         public string prec = "";
-        public string estado = "";
+        public int estado = 1;
 
         private ArticuloDTO articuloDTO;
         protected void Page_Load(object sender, EventArgs e)
@@ -27,7 +27,18 @@ namespace Muebles.Forms.Proveedor
             prec = Convert.ToString(Request.QueryString["prec"]);
             descrip = Convert.ToString(Request.QueryString["descrip"]);
             name = Convert.ToString(Request.QueryString["name"]);
-            estado = Convert.ToString(Request.QueryString["estado"]);
+            estado = Convert.ToInt32(Request.QueryString["estado"]);
+            if(estado == 1)
+            {
+                inputEstado.Value = "Activo";
+            } else if(estado == 0)
+            {
+                inputEstado.Value = "Desactivado";
+            } else
+            {
+                inputEstado.Value = "Indefinido";
+            }
+
             //se asignan los datos al formulario
             idProducto.Value = id;
             precio.Value = prec;

@@ -17,24 +17,40 @@ namespace Muebles.Forms.Administrador
         }
         public void listarCliente()
         {
+            string statusString = "";
             ClienteDTO cli = new ClienteDTO();
             
             foreach (ClienteDTO dat in cli.consultarTodos())
             {
+                if (dat.estado == 1)
+                {
+                    statusString = "Activo";
+                }
+                else if (dat.estado == 0)
+                {
+                    statusString = "Desactivado";
+                }
+                else
+                {
+                    statusString = "Indefinido";
+                }
+
 
                 Response.Write("<tr>");
-                Response.Write("<td>" +  dat.id + "</td>");
-                Response.Write("<td>" +   dat.nomb + "</td>");
+                Response.Write("<td>" + dat.id + "</td>");
+                Response.Write("<td>" + dat.nomb + "</td>");
                 Response.Write("<td>" + dat.correo + "</td>");
+                Response.Write("<td>" + statusString + "</td>");
                 Response.Write("<td>");
                 Response.Write("<a class='btn btn-info' href='./ActualizarCliente.aspx" +
-                    "?id=" + cli.id +
-                    "&name=" + cli.correo + "'><i>Actualizar</i></a>");
-                Response.Write("<a class='btn btn-info'><i>Eliminar</i></a>");
+                    "?id=" + dat.id +
+                    "&name=" + dat.nomb +
+                    "&correo=" + dat.correo +
+                    "&estado=" + dat.estado + "'><i>Actualizar Estado</i></a>");
                 Response.Write("</td>");
 
                 Response.Write("</tr>");
-               
+
             }
 
 
