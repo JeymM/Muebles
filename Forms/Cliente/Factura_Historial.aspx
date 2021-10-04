@@ -1,16 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Factura_Historial.aspx.cs" Inherits="Muebles.Forms.Cliente.Factura_Historial" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Forms/Cliente/ClienteMain.Master" AutoEventWireup="true" CodeBehind="Factura_Historial.aspx.cs" Inherits="Muebles.Forms.Cliente.Factura_Historial" %>
 
-<!DOCTYPE html>
+<asp:Content ID="ContentClienteMain" ContentPlaceHolderID="ClienteID" runat="server">
+    
+    
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+
+    <h1>Bienvenid@  <%  Response.Write(Session["nombre"]);%></h1>
+    
+
+
+</asp:Content>
