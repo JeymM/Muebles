@@ -24,6 +24,7 @@ namespace Muebles.Forms.Administrador
                 ClienteDTO obj = new ClienteDTO(iduser.Value, nombre.Value, email.Value, clave.Value, 1);
                 obj.insertar();
                 MessageBox.Show("Registro exitoso");
+                vaciarCampos();
             }
             else if (ingreso == "Administrador")
             {
@@ -31,6 +32,7 @@ namespace Muebles.Forms.Administrador
                 AdministradorDTO obj1 = new AdministradorDTO(iduser.Value, nombre.Value, contac.Value, email.Value, clave.Value, 1);
                 obj1.insertar();
                 MessageBox.Show("Registro exitoso");
+                vaciarCampos();
             }
 
         else if (ingreso == "Proveedor")
@@ -38,6 +40,7 @@ namespace Muebles.Forms.Administrador
                 ProveedorDTO obj = new ProveedorDTO(iduser.Value, contac.Value, dirección.Value, nombre.Value, email.Value, clave.Value, 1);
         obj.insertar();
                 MessageBox.Show("Registro exitoso");
+                vaciarCampos();
             }
 
            
