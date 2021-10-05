@@ -71,7 +71,7 @@ Inherits="Muebles.Forms.Index" %>
             ¿No tienes una cuenta?, ¡Crea una en el siguiente formulario!
           </p>
 
-              <label class="fs-5 text-light text-center">!Unetea una comunidad con grandes descuentos!</label>
+              <label class="fs-5 text-light text-center">!Unete a una comunidad con grandes descuentos!</label>
           <div class="p-3 d-flex">
               <a class="center my-3 mx-3 fs-3 text-center text-light btn-primary btn" href=<% Response.Write(Session["url"] + "/Cliente/Registro.aspx");%>>Registrarse</a>
           </div>

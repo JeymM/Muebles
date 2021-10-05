@@ -19,7 +19,10 @@ namespace Muebles.Forms.Cliente
         {
             ClienteDTO obj = new ClienteDTO(idc.Value, namec.Value, emailc.Value, clavec.Value, 1);
             obj.insertar();
-            MessageBox.Show("Registro exitoso");
+            string script = String.Format(@"<script type='text/javascript'>alert('Registro exitoso' );</script>", "0033");
+            ScriptManager.RegisterStartupScript(this, typeof(Page), "alerta", script, false);
+            //MessageBox.Show("Registro exitoso");
+            Response.Redirect(Session["url"] + "/index.aspx");
         }
       
     }
