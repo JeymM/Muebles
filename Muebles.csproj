@@ -44,12 +44,50 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1484.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.25\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="MySqlConnector, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlConnector.1.4.0-beta.1\lib\net45\MySqlConnector.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -80,10 +118,13 @@
     <Content Include="Forms\Administrador\Inventario.aspx" />
     <Content Include="Forms\Administrador\Productos_Prov.aspx" />
     <Content Include="Forms\Administrador\Registro_Usersnew.aspx" />
+    <Content Include="Forms\Administrador\Reporte1.aspx" />
     <Content Include="Forms\Administrador\sesionsesionadministrador.aspx" />
     <Content Include="Forms\Administrador\Update.aspx" />
     <Content Include="Forms\Administrador\Ventas.aspx" />
+    <Content Include="Forms\Administrador\VerificarAdmin.aspx" />
     <Content Include="Forms\Administrador\VerificarClientes.aspx" />
+    <Content Include="Forms\Administrador\VerificarEmpleado.aspx" />
     <Content Include="Forms\Cliente\ActualizarDatos.aspx" />
     <Content Include="Forms\Cliente\Carrito.aspx" />
     <Content Include="Forms\Cliente\Factura_Historial.aspx" />
@@ -98,6 +139,19 @@
     <Content Include="Forms\Proveedor\Historial_Ventas.aspx" />
     <Content Include="Forms\Proveedor\InicioProveedor.aspx" />
     <Content Include="Forms\Proveedor\sesionproveedor.aspx" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -132,6 +186,11 @@
     <Compile Include="Forms\Administrador\Compras.aspx.designer.cs">
       <DependentUpon>Compras.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\Datos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\Inventario.aspx.cs">
       <DependentUpon>Inventario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -152,6 +211,13 @@
     </Compile>
     <Compile Include="Forms\Administrador\Registro_Usersnew.aspx.designer.cs">
       <DependentUpon>Registro_Usersnew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\Reporte1.aspx.cs">
+      <DependentUpon>Reporte1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Reporte1.aspx.designer.cs">
+      <DependentUpon>Reporte1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Administrador\sesionsesionadministrador.aspx.cs">
       <DependentUpon>sesionsesionadministrador.aspx</DependentUpon>
@@ -174,12 +240,26 @@
     <Compile Include="Forms\Administrador\Ventas.aspx.designer.cs">
       <DependentUpon>Ventas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\VerificarAdmin.aspx.cs">
+      <DependentUpon>VerificarAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\VerificarAdmin.aspx.designer.cs">
+      <DependentUpon>VerificarAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\VerificarClientes.aspx.cs">
       <DependentUpon>VerificarClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Administrador\VerificarClientes.aspx.designer.cs">
       <DependentUpon>VerificarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administrador\VerificarEmpleado.aspx.cs">
+      <DependentUpon>VerificarEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\VerificarEmpleado.aspx.designer.cs">
+      <DependentUpon>VerificarEmpleado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cliente\ActualizarDatos.aspx.cs">
       <DependentUpon>ActualizarDatos.aspx</DependentUpon>
@@ -305,11 +385,23 @@
     <Compile Include="DTO\ClienteDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PersistenciaDAO\Tel_proveedorDAO.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Forms\Proveedor\ProveedorMain.Master" />
     <Content Include="Forms\Administrador\AdministradorMain.Master" />
     <Content Include="Forms\Cliente\ClienteMain.Master" />
+    <Content Include="Forms\Administrador\Datos.xsc">
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </Content>
+    <None Include="Forms\Administrador\Datos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Datos.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Forms\Administrador\Datos.xss">
+      <DependentUpon>Datos.xsd</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -318,7 +410,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
