@@ -77,7 +77,24 @@ namespace Muebles.DTO
             this.conexion.cerrar();
             return articulos;
         }
+        public ArticuloDTO obtenerArticuloPorID(string idProducto)
+        {
+            articulos = new List<ArticuloDTO>();
 
+
+            int i = 0;
+            this.conexion.ejecutar(this.AD.obtenerArticuloPorID(idProducto));
+            ArticuloDTO a;
+            while (conexion.resultado.Read())
+            {
+                a = new ArticuloDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetString(3), "" + conexion.resultado.GetString(4), conexion.resultado.GetInt32(5));
+                articulos.Add(a);
+                i++;
+            }
+
+            this.conexion.cerrar();
+            return articulos.ElementAt(0);
+        }
         public void actualizar()
         {
             this.conexion.ejecutar(this.AD.Actualizacion());

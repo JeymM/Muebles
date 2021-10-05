@@ -20,16 +20,16 @@ namespace Muebles.Forms.Cliente
             string statusString = "";
             ArticuloDTO ar = new ArticuloDTO();
             CompraDTO cp = new CompraDTO();
-
+            string nombreArticulo = "";
             if(Session["id"] != null)
             {
                 foreach (CompraDTO compra in cp.VentasPorCliente(Convert.ToString(Session["id"])))//Convert.ToString(Session["id"])
                 {
-
+                    nombreArticulo = ar.obtenerArticuloPorID(compra.id_art_fk + "").nombre;
 
                     Response.Write("<tr>");
                     Response.Write("<td>" + compra.fecha_pago+ "</td>");
-                    Response.Write("<td>" + compra.id_art_fk + "</td>");
+                    Response.Write("<td>" + nombreArticulo + "</td>");
                     Response.Write("<td>" + compra.cantidad + "</td>");
                     Response.Write("<td>" + (compra.valor_total/compra.cantidad) + "</td>");
                     Response.Write("<td>" + compra.valor_total + "</td>");

@@ -36,6 +36,10 @@ namespace Muebles
         {
             return "Select * from articulo where estado=" + 1 + "";
         }
+        public string obtenerArticuloPorID(string idProducto)
+        {
+            return "Select * from articulo where id=" + idProducto + "";
+        }
         public string Consulta_T()
         {
             return "Select * from articulo ";
