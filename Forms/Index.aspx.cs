@@ -113,21 +113,10 @@ namespace Muebles.Forms
                 }
             }
         }
-        public void btn_Ingresar(object sender, EventArgs e)
+        public void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("dio click en registrar");
-            ClienteDTO obje = new ClienteDTO(idRegistro.Value, nombreRegistro.Value, correoRegistro.Value, passwordRegistro.Value, 1);
-            obje.insertar();
-            MessageBox.Show("Registro exitoso");
-            vaciarCampos();
+            Response.Redirect(Session["url"] + "/Cliente/Registro.aspx");
         }
-        protected void vaciarCampos()
-        {
-            idRegistro.Value = "";
-            nombreRegistro.Value = "";
-            correo.Value = "";
-            passwordRegistro.Value = "";
-          
-        }
+       
     }
 }

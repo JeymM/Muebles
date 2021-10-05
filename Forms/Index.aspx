@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs"
+﻿45<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs"
 Inherits="Muebles.Forms.Index" %>
 
 <!DOCTYPE html>
@@ -72,53 +72,15 @@ Inherits="Muebles.Forms.Index" %>
           </p>
 
           <p class="center fs-3 text-center text-light">Registrarse</p>
-             <div class="mb-2 px-3">
-            <input
-              name="idRegistro"
-              type="text"
-              class="form-control"
-              id="idRegistro"
-              runat="server"
-              placeholder="Ingresa su identificacion"
-            />
-          </div>
-             <div class="mb-2 px-3">
-            <input
-              name="nombreRegistro"
-              type="text"
-              class="form-control"
-              id="nombreRegistro"
-              runat="server"
-              placeholder="Ingresa su nombre"
-            />
-          </div>
-          <div class="mb-2 px-3">
-            <input
-              name="correoRegistro"
-              type="text"
-              class="form-control"
-              id="correoRegistro"
-              runat="server"
-              placeholder="Ingresa su email"
-            />
-          </div>
-          <div class="mb-2 px-3">
-            <input
-              id="passwordRegistro"
-              runat="server"
-              type="password"
-              name="passwordRegistro"
-              placeholder="Contraseña"
-              class="form-control"
-            />
-          </div>
-          <asp:button  
-            runat="server"
-            OnClick="BtnIngresar"
-            class="btn btn-primary w-75 p-2 mx-5 align-center text-center mb-2"
-          >
-            Registrar
-          </asp:button>
+            
+              <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Registrarme
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Cliente/Registro.aspx");%>>Crear cuenta</a></li>
+          </ul>
+        </li>
         </div>
         <div class="col-md-9 gray-900 p-0">
           <div

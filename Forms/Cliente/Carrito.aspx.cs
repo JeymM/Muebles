@@ -80,6 +80,8 @@ namespace Muebles.Forms.Cliente
                 {
                     System.Diagnostics.Debug.WriteLine("el id ingresado existe!! id: " + idProducto.Value);
                     listName.Add(listaProductos.ElementAt(i).nombre + " x " + stock.Value);
+                    PedidoDTO obj = new PedidoDTO();
+                    
                     //aca toca hacer de registrar el producto
 
                     //se crea un pedido (si creas un capo para idarticulo dentro de la tabla pedido, 

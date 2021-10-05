@@ -88,6 +88,7 @@
     <Content Include="Forms\Cliente\Carrito.aspx" />
     <Content Include="Forms\Cliente\Factura_Historial.aspx" />
     <Content Include="Forms\Cliente\InicioCliente.aspx" />
+    <Content Include="Forms\Cliente\Registro.aspx" />
     <Content Include="Forms\Cliente\sesionsesioncliente.aspx" />
     <Content Include="Forms\Index.aspx" />
     <Content Include="Forms\Proveedor\Actualizacion.aspx" />
@@ -213,6 +214,13 @@
     </Compile>
     <Compile Include="Forms\Cliente\InicioCliente.aspx.designer.cs">
       <DependentUpon>InicioCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cliente\sesionsesioncliente.aspx.cs">
       <DependentUpon>sesionsesioncliente.aspx</DependentUpon>
