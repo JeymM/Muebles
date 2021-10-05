@@ -8,12 +8,12 @@ namespace Muebles.DTO
 {
     public class CompraDTO
     {
-        private int id_cliente_fk { get; set; }
-        private int id_art_fk { get; set; }
-        private double valor_total { get; set; }
-        private DateTime fecha_pago { get; set; }
-        private int cantidad { get; set; }
-        public List<CompraDTO> compras { get => compras; set => compras = value; }
+        public int id_cliente_fk { get; set; }
+        public int id_art_fk { get; set; }
+        public double valor_total { get; set; }
+        public string fecha_pago { get; set; }
+        public int cantidad { get; set; }
+        public List<CompraDTO> compras;
         private CompraDAO PED;
         private Conexion conexion;
         public CompraDTO()
@@ -29,7 +29,7 @@ namespace Muebles.DTO
             this.id_cliente_fk = int.Parse(id_cliente_fk);
             this.id_art_fk = int.Parse(id_art_fk);
             this.valor_total = double.Parse(valor_total);
-            this.fecha_pago = DateTime.Parse(fecha_pago);
+            this.fecha_pago = fecha_pago + "";
             this.cantidad = int.Parse(cantidad);
 
         }
@@ -49,10 +49,11 @@ namespace Muebles.DTO
             CompraDTO pe;
             while (conexion.resultado.Read())
             {
-                pe = new CompraDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), conexion.resultado.GetString(3), "" + conexion.resultado.GetInt32(4));
+                pe = new CompraDTO("" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetDouble(3), "" + conexion.resultado.GetMySqlDateTime(4), "" + conexion.resultado.GetInt32(5));
                 compras.Add(pe);
                 i++;
             }
+
 
             this.conexion.cerrar();
             return compras;
@@ -66,9 +67,10 @@ namespace Muebles.DTO
             int i = 0;
             this.conexion.ejecutar(this.PED.VentasPorCliente(idCliente));
             CompraDTO pe;
+            System.Diagnostics.Debug.WriteLine(conexion.resultado.HasRows);
             while (conexion.resultado.Read())
             {
-                pe = new CompraDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), conexion.resultado.GetString(3), "" + conexion.resultado.GetInt32(4));
+                pe = new CompraDTO("" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetDouble(3), "" + conexion.resultado.GetMySqlDateTime(4), "" + conexion.resultado.GetInt32(5));
                 compras.Add(pe);
                 i++;
             }
@@ -86,7 +88,7 @@ namespace Muebles.DTO
             CompraDTO pe;
             while (conexion.resultado.Read())
             {
-                pe = new CompraDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), conexion.resultado.GetString(3), "" + conexion.resultado.GetInt32(4));
+                pe = new CompraDTO("" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetDouble(3), "" + conexion.resultado.GetMySqlDateTime(4), "" + conexion.resultado.GetInt32(5));
                 compras.Add(pe);
                 i++;
             }
@@ -104,7 +106,7 @@ namespace Muebles.DTO
             CompraDTO pe;
             while (conexion.resultado.Read())
             {
-                pe = new CompraDTO("" + conexion.resultado.GetInt32(0), "" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), conexion.resultado.GetString(3), "" + conexion.resultado.GetInt32(4));
+                pe = new CompraDTO("" + conexion.resultado.GetInt32(1), "" + conexion.resultado.GetInt32(2), "" + conexion.resultado.GetDouble(3), "" + conexion.resultado.GetMySqlDateTime(4), "" + conexion.resultado.GetInt32(5));
                 compras.Add(pe);
                 i++;
             }
