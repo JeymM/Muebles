@@ -17,12 +17,12 @@
 
                 <div class="form-group">
                   <label>ID </label>
-                  <input runat="server" name="id_c" id="id_c" type="number" class="form-control" placeholder="Ingrese el ID " required="required" disabled>
+                  <input runat="server" name="id_cl" id="id_cl" type="number" class="form-control" placeholder="Ingrese el ID " required="required" disabled>
 			    </div>
 
                 <div class="form-group">
                   <label>Nombre</label>
-                  <input runat="server" name="nombre_c" type="text" id="nombre_c" class="form-control" placeholder="Ingrese el nombre" required="required" disabled>
+                  <input runat="server" name="nombre_cl" type="text" id="nombre_cl" class="form-control" placeholder="Ingrese el nombre" required="required" disabled>
 				</div>
 
                 <div class="form-group">

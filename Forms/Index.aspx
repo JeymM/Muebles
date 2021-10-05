@@ -72,6 +72,26 @@ Inherits="Muebles.Forms.Index" %>
           </p>
 
           <p class="center fs-3 text-center text-light">Registrarse</p>
+             <div class="mb-2 px-3">
+            <input
+              name="idRegistro"
+              type="text"
+              class="form-control"
+              id="idRegistro"
+              runat="server"
+              placeholder="Ingresa su identificacion"
+            />
+          </div>
+             <div class="mb-2 px-3">
+            <input
+              name="nombreRegistro"
+              type="text"
+              class="form-control"
+              id="nombreRegistro"
+              runat="server"
+              placeholder="Ingresa su nombre"
+            />
+          </div>
           <div class="mb-2 px-3">
             <input
               name="correoRegistro"
@@ -92,13 +112,13 @@ Inherits="Muebles.Forms.Index" %>
               class="form-control"
             />
           </div>
-          <button
+          <asp:button  
             runat="server"
-            OnClick="BtnRegistrar_Click"
+            OnClick="BtnIngresar"
             class="btn btn-primary w-75 p-2 mx-5 align-center text-center mb-2"
           >
             Registrar
-          </button>
+          </asp:button>
         </div>
         <div class="col-md-9 gray-900 p-0">
           <div

@@ -7,12 +7,30 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Muebles.Forms
+namespace Muebles.Forms.Cliente
 {
 
 
-    public partial class Index
+    public partial class ActualizarDatos
     {
+
+        /// <summary>
+        /// Control id_cl.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl id_cl;
+
+        /// <summary>
+        /// Control nombre_c.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nombre_c;
 
         /// <summary>
         /// Control correo.
@@ -24,57 +42,21 @@ namespace Muebles.Forms
         protected global::System.Web.UI.HtmlControls.HtmlInputText correo;
 
         /// <summary>
-        /// Control password.
+        /// Control clave_c.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword password;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText clave_c;
 
         /// <summary>
-        /// Control BtnIngresar.
+        /// Control botonCli.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnIngresar;
-
-        /// <summary>
-        /// Control idRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText idRegistro;
-
-        /// <summary>
-        /// Control nombreRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nombreRegistro;
-
-        /// <summary>
-        /// Control correoRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText correoRegistro;
-
-        /// <summary>
-        /// Control passwordRegistro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword passwordRegistro;
+        protected global::System.Web.UI.WebControls.Button botonCli;
     }
 }

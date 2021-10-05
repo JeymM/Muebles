@@ -20,7 +20,7 @@
     Cuenta
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Cliente/");%>>Actualizar Datos</a></li>
+    <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Cliente/ActualizarDatos.aspx");%>>Actualizar Datos</a></li>
     <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Index.aspx");%>>Cerrar Sesión</a></li>
   </ul>
 </div>

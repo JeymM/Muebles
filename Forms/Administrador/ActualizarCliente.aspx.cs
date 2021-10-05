@@ -40,8 +40,8 @@ namespace Muebles.Forms.Administrador
             }
 
             //se asignan los datos al formulario
-            id_c.Value = id_client;
-            nombre_c.Value = nombreClient;
+            id_cl.Value = id_client;
+            nombre_cl.Value = nombreClient;
             correo.Value = emailClient;
         }
         protected void actualizar_cli(object sender, EventArgs e)

@@ -63,6 +63,11 @@ namespace Muebles.DTO
             this.conexion.ejecutar(this.CD.Actualizacion());
             this.conexion.cerrar();
         }
+        public void actualizarn()
+        {
+            this.conexion.ejecutar(this.CD.Actualizacionn());
+            this.conexion.cerrar();
+        }
         public void eliminar()
         {
             this.conexion.ejecutar(this.CD.Eliminar());

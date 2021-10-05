@@ -53,7 +53,7 @@ namespace Muebles
         }
         public string Actualizacion()
         {
-            return "update administrador set " + "nombre='" + nom + "'," + "'tel_admi' = '" + tel_ad + "'," + "'correo' = '" + correo + "'," + "'clave' = '" + clave + "'where id Admin=" + id_ad+"";
+            return "update administrador set " + "tel_admi = '" + tel_ad + "'," + "clave = '" + clave + "' where id_a=" + id_ad+"";
         }
 
         public string Eliminar()

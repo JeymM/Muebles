@@ -78,13 +78,16 @@
     <Content Include="Forms\Administrador\Productos_Prov.aspx" />
     <Content Include="Forms\Administrador\Registro_Usersnew.aspx" />
     <Content Include="Forms\Administrador\sesionsesionadministrador.aspx" />
+    <Content Include="Forms\Administrador\Update.aspx" />
     <Content Include="Forms\Administrador\Ventas.aspx" />
     <Content Include="Forms\Administrador\VerificarClientes.aspx" />
+    <Content Include="Forms\Cliente\ActualizarDatos.aspx" />
     <Content Include="Forms\Cliente\Carrito.aspx" />
     <Content Include="Forms\Cliente\Factura_Historial.aspx" />
     <Content Include="Forms\Cliente\InicioCliente.aspx" />
     <Content Include="Forms\Cliente\sesionsesioncliente.aspx" />
     <Content Include="Forms\Index.aspx" />
+    <Content Include="Forms\Proveedor\Actualizacion.aspx" />
     <Content Include="Forms\Proveedor\ActualizarArticulo.aspx" />
     <Content Include="Forms\Proveedor\articulo.aspx" />
     <Content Include="Forms\Proveedor\articuloIngresarStock.aspx" />
@@ -152,6 +155,13 @@
     <Compile Include="Forms\Administrador\sesionsesionadministrador.aspx.designer.cs">
       <DependentUpon>sesionsesionadministrador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Administrador\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Administrador\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Administrador\Ventas.aspx.cs">
       <DependentUpon>Ventas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,6 +175,13 @@
     </Compile>
     <Compile Include="Forms\Administrador\VerificarClientes.aspx.designer.cs">
       <DependentUpon>VerificarClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cliente\ActualizarDatos.aspx.cs">
+      <DependentUpon>ActualizarDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Cliente\ActualizarDatos.aspx.designer.cs">
+      <DependentUpon>ActualizarDatos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cliente\Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
@@ -207,6 +224,13 @@
     </Compile>
     <Compile Include="Forms\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Proveedor\Actualizacion.aspx.cs">
+      <DependentUpon>Actualizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Proveedor\Actualizacion.aspx.designer.cs">
+      <DependentUpon>Actualizacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Proveedor\ActualizarArticulo.aspx.cs">
       <DependentUpon>ActualizarArticulo.aspx</DependentUpon>

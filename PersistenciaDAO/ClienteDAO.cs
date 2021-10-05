@@ -49,6 +49,10 @@ namespace Muebles
         {
             return "update cliente set " + "estado="+ estado + " where id=" + id + "";
         }
+        public string Actualizacionn()
+        {
+            return "update cliente set " + "nombre='" + nomb + "'," + "clave = '" + clave +  "' where id=" + id + "";
+        }
         public string Eliminar()
         {
             return "DELETE FROM cliente WHERE id="+id + ";";
