@@ -48,6 +48,10 @@ namespace Muebles
         {
             return "update articulo set " + "nit_fk='" + id_provee + "'," + "precio = '" + prec + "', " + "descripcion='" + descrip + "', " + "nombre='" + nombre + "'," + "estado = '" + estado + "' where id=" + ide + "";
         }
+        public string DescargarStockEnCompra(string stock, string idProducto)
+        {
+            return "update articulo set " + "nit_fk=" + stock + " where id=" + idProducto + "";
+        }
         public string Eliminar()
         {
             return "delete from articulo WHERE id = " + ide + ";";
