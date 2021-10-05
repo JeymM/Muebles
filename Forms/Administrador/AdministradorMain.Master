@@ -30,11 +30,11 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/VerificarClientes.aspx");%>>Clientes Registrados</a></li>
-              <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/VerificarEmpleados.aspx");%>>Empleados Registrados</a></li>
+              <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/VerificarEmpleado.aspx");%>>Empleados Registrados</a></li>
              <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/Registro_Usersnew.aspx");%>>Registrar usuarios</a></li>
              
 
-            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/VerificarEmpleados.aspx");%>>Empleados Registrados</a></li>
+            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Administrador/VerificarAdmin.aspx");%>>Administradores Registrados</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
