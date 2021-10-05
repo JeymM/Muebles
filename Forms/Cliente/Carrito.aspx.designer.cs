@@ -15,12 +15,30 @@ namespace Muebles.Forms.Cliente
     {
 
         /// <summary>
-        /// Control botonCom.
+        /// Control idProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button botonCom;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl idProducto;
+
+        /// <summary>
+        /// Control stock.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl stock;
+
+        /// <summary>
+        /// Control buttonp.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button buttonp;
     }
 }
