@@ -11,7 +11,7 @@ namespace Muebles.PersistenciaDAO
         private int id_cliente_fk;
         private int id_art_fk;
         private double valor_total;
-        private DateTime fecha_pago;
+        private string fecha_pago;
         private int cantidad;
 
         public CompraDAO()
@@ -24,7 +24,7 @@ namespace Muebles.PersistenciaDAO
             this.id_cliente_fk = int.Parse(id_cliente_fk);
             this.id_art_fk = int.Parse(id_art_fk);
             this.valor_total = double.Parse(valor_total);
-            this.fecha_pago = DateTime.Parse(fecha_pago);
+            this.fecha_pago = fecha_pago;
             this.cantidad = int.Parse(cantidad);
 
         }

@@ -82,7 +82,13 @@ namespace Muebles.DTO
         {
             this.conexion.ejecutar(this.AD.Actualizacion());
             this.conexion.cerrar();
-        }public void eliminar()
+        }
+        public void DescargarStockEnCompra(string stock, string idProducto)
+        {
+            this.conexion.ejecutar(this.AD.DescargarStockEnCompra(stock, idProducto));
+            this.conexion.cerrar();
+        }
+        public void eliminar()
         {
             this.conexion.ejecutar(this.AD.Eliminar());
             this.conexion.cerrar();

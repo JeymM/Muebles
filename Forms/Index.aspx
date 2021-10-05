@@ -1,4 +1,4 @@
-﻿45<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs"
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs"
 Inherits="Muebles.Forms.Index" %>
 
 <!DOCTYPE html>
@@ -67,20 +67,14 @@ Inherits="Muebles.Forms.Index" %>
               Text="Ingresar"
             />
           </form>
-          <p class="fs-5 text-light text-center texet-muted py-2">
-            ¿No tienes una cuenta?, ¡Crea una en el siguiente formulario
+          <p class="fs-5 my-4 text-light text-center texet-muted py-2">
+            ¿No tienes una cuenta?, ¡Crea una en el siguiente formulario!
           </p>
 
-          <p class="center fs-3 text-center text-light">Registrarse</p>
-            
-              <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Registrarme
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href=<% Response.Write(Session["url"] + "/Cliente/Registro.aspx");%>>Crear cuenta</a></li>
-          </ul>
-        </li>
+              <label class="fs-5 text-light text-center">!Unetea una comunidad con grandes descuentos!</label>
+          <div class="p-3 d-flex">
+              <a class="center my-3 mx-3 fs-3 text-center text-light btn-primary btn" href=<% Response.Write(Session["url"] + "/Cliente/Registro.aspx");%>>Registrarse</a>
+          </div>
         </div>
         <div class="col-md-9 gray-900 p-0">
           <div

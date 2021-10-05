@@ -52,9 +52,9 @@
                   placeholder="Ingrese el stock del producto" required="required">
               </div>
 
+			<asp:button runat="server" Text="Realizar compra" id="buttonp" name="comprar" class="btn btn-warning w-100" OnClick="registrar_com"></asp:button>
             </div>
           </div>
-			<asp:button runat="server" Text="Realizar compra" id="buttonp" name="comprar" class="btn btn-warning w-100" OnClick="registrar_com"></asp:button>
 		</div>
 			</div>
 	</div>	 
