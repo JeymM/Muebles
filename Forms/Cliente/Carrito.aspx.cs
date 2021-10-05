@@ -13,24 +13,20 @@ namespace Muebles.Forms.Cliente
 {
     public partial class Carrito : System.Web.UI.Page
     {
-
+        private const string Format = "yyyy-MM-dd HH:mm:ss";
         List<ArticuloDTO> listaProductos = new List<ArticuloDTO>();
         List<String> listID = new List<string>();
         List<String> listName = new List<string>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            int i = 0;
+            ArticuloDTO ar = new ArticuloDTO();
+            foreach (ArticuloDTO arti in ar.consultarActivos())
             {
-                int i = 0;
-                ArticuloDTO ar = new ArticuloDTO();
-                foreach (ArticuloDTO arti in ar.consultarActivos())
-                {
-                    listaProductos.Add(arti);
-                    listID.Add("id" + i);
-                    i = i++;
-                }
-            }
-            
+               listaProductos.Add(arti);
+               listID.Add("id" + i);
+               i = i++;
+            }   
 
         }
         public void listaCarrito()
@@ -47,11 +43,6 @@ namespace Muebles.Forms.Cliente
                 Response.Write("<td>" + arti.descrip + "</td>");
                 Response.Write("<td>" + arti.id_provee + "</td>");
                 Response.Write("</tr>");
-
-                
-                System.Diagnostics.Debug.WriteLine("nombre "+arti.nombre);
-                
-                
 
                 i = i + 1;
             }
@@ -70,7 +61,6 @@ namespace Muebles.Forms.Cliente
         }
         protected void registrar_com(object sender, EventArgs e)
         {
-
             for (int i = 0; i < listaProductos.Count; i++)
             {
                 if (
@@ -78,19 +68,21 @@ namespace Muebles.Forms.Cliente
                     Convert.ToInt32(stock.Value) <= listaProductos.ElementAt(i).id_provee
                     )
                 {
-                    System.Diagnostics.Debug.WriteLine("el id ingresado existe!! id: " + idProducto.Value);
-                    listName.Add(listaProductos.ElementAt(i).nombre + " x " + stock.Value);
-                    PedidoDTO obj = new PedidoDTO();
-                    
-                    //aca toca hacer de registrar el producto
+                    //creamos el objeto comprar del producto
+                    double valorTotal = Convert.ToInt32(listaProductos.ElementAt(i).prec) * Convert.ToInt32(stock.Value);
+                    string fechaCompra = DateTime.Now.ToString(Format);
 
-                    //se crea un pedido (si creas un capo para idarticulo dentro de la tabla pedido, 
-                    //y añades ese campo en dao y dto te ahorras usar tambien el articulo_pedido que usa una llave compuesta)
+                    System.Diagnostics.Debug.WriteLine("id cliente: " + Session["id"] + "" +
+                        "\nfechaCompra: " + fechaCompra + " \nvalorTotal: " + valorTotal);
 
-                    //se crea un articulo_pedido
+                    CompraDTO obj = new CompraDTO(Convert.ToString(Session["id"]), idProducto.Value, Convert.ToString(valorTotal), Convert.ToString(fechaCompra), stock.Value);
+                    obj.insertar();
 
+                    int stockActual = listaProductos.ElementAt(i).id_provee - Convert.ToInt32(stock.Value);
                     //se hace un update que elimine el stock que sacamos del producto, es decir que haga
                     //un update que reste la cantidad de stock que se saco.
+                    ArticuloDTO ar = new ArticuloDTO();
+                    ar.DescargarStockEnCompra(Convert.ToString(stockActual), idProducto.Value);
                 }
 
             }

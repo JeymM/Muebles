@@ -159,6 +159,7 @@
     <Compile Include="DTO\AdministradorDTO.cs" />
     <Compile Include="DTO\ArticuloDTO.cs" />
     <Compile Include="DTO\Articulo_PedidoDTO.cs" />
+    <Compile Include="DTO\CompraDTO.cs" />
     <Compile Include="DTO\Dir_ClienteDTO.cs" />
     <Compile Include="DTO\PedidoDTO.cs" />
     <Compile Include="DTO\ProveedorDTO.cs" />
@@ -375,6 +376,7 @@
     <Compile Include="PersistenciaDAO\AdministradorDAO .cs" />
     <Compile Include="PersistenciaDAO\ArticuloDAO.cs" />
     <Compile Include="PersistenciaDAO\Articulo_pedidoDAO.cs" />
+    <Compile Include="PersistenciaDAO\CompraDAO.cs" />
     <Compile Include="PersistenciaDAO\ProveedorDAO.cs" />
     <Compile Include="PersistenciaDAO\PedidoDAO.cs" />
     <Compile Include="PersistenciaDAO\Tel_ClienteDAO.cs" />

@@ -142,6 +142,29 @@ INSERT INTO `pedido` (`id_p`, `id_cliente_fk`, `valor_total`, `fecha_pago`) VALU
 (6, 123, 20500, '0000-00-00 00:00:00'),
 (7, 123, 10500, '0000-00-00 00:00:00');
 
+
+--
+-- Estructura de tabla para la tabla `compra`
+--
+
+CREATE TABLE compra(
+	id_compra int AUTO_INCREMENT PRIMARY KEY,
+	id_cliente_fk int not null,
+	id_art_fk int not null,
+	valor_total int not null,
+	fecha_pago datetime not null,
+	cantidad double not null,
+    FOREIGN KEY(id_cliente_fk) REFERENCES cliente(id),
+    FOREIGN KEY(id_art_fk) REFERENCES articulo(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `pedido`
+--
+
+INSERT INTO `compra` (`id_cliente_fk`, `id_art_fk`, `valor_total`, `fecha_pago`, `cantidad`) VALUES
+(45, 1, 10500, '0000-00-00 00:00:00', 2);
+
 -- --------------------------------------------------------
 
 --
